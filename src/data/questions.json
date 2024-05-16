@@ -1,0 +1,10 @@
+[
+    {
+        "question": "Qual é a capital do Brasil?",
+        "answers": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"]
+    },
+    {
+        "question": "Qual é o maior planeta do sistema solar?",
+        "answers": ["Marte", "Vênus", "Júpiter", "Saturno"]
+    }
+]

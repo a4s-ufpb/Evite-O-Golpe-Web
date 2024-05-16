@@ -1,0 +1,27 @@
+:root{
+	--bg-color: #0a4b75;
+	--second-bg-color: #5191c1;
+	--text-color: #ffffff;
+	--second-color: #ffffff;
+	--main-color: #ff4d05;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+}
+
+.navbar h2 a {
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 1rem;
+}
