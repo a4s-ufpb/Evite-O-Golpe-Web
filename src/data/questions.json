@@ -98,10 +98,5 @@
         "question": "Como evitar golpes em aplicativos de namoro online?",
         "answers": ["Compartilhar informações pessoais rapidamente", "Desconfiar de perfis com informações incompletas", "Confiar em todas as declarações feitas pelos usuários", "Nunca relatar comportamentos suspeitos"],
         "correct": "Desconfiar de perfis com informações incompletas"
-    },
-    {
-        "question": "O que fazer ao receber e-mails solicitando informações bancárias urgentes?",
-        "answers": ["Fornecer imediatamente as informações solicitadas", "Entrar em contato com o banco utilizando canais oficiais (como app do banco ou telefone do gerente)", "Ignorar completamente e-mails do banco", "Compartilhar o e-mail publicamente para alertar outros"],
-        "correct": "Entrar em contato com o banco utilizando canais oficiais (como app do banco ou telefone do gerente)"
     }
 ]
