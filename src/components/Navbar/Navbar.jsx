@@ -14,6 +14,12 @@ const Navbar = () => {
             <li>
                 <Link to={'/Quiz'}>Quiz</Link>
             </li>
+            <li>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Site</a>
+            </li>
+            <li>
+                <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer">Formulário</a>
+            </li>
         </ul>
     </nav>
   )

@@ -5,8 +5,8 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 
 //Páginas
-import Home from './routes/Home.jsx';
-import Quiz from './routes/Quiz.jsx';
+import Home from './routes/Home/Home.jsx';
+import Quiz from './routes/Quiz/Quiz.jsx';
 
 import './index.css'
 
