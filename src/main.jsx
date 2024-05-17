@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 
 //Páginas
 import Home from './routes/Home.jsx';
-import About from './routes/About.jsx';
+import Quiz from './routes/Quiz.jsx';
 
 import './index.css'
 
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/about",
-        element: <About />
+        path: "/Quiz",
+        element: <Quiz />
       },
     ]
   }
