@@ -15,6 +15,9 @@ const Navbar = () => {
                 <Link to={'/Quiz'}>Quiz</Link>
             </li>
             <li>
+                <Link to={'/Tutorial'}>Tutorial</Link>
+            </li>
+            <li>
                 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Site</a>
             </li>
             <li>
