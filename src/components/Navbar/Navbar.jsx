@@ -18,7 +18,7 @@ const Navbar = () => {
                 <Link to={'/Tutorial'}>Tutorial</Link>
             </li>
             <li>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Site</a>
+                <a href="https://eviteogolpe.netlify.app/" target="_blank" rel="noopener noreferrer">Site</a>
             </li>
             <li>
                 <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer">Formulário</a>

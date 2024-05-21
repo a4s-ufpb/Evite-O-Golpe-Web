@@ -1,15 +1,25 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import './Quiz.css';
 import quizQuestions from '../../data/questions.json';
+import { useNavigate } from 'react-router-dom';
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [questions, setQuestions] = useState([]);
+  const navigate = useNavigate();
 
+  // Função que embaralha e diminui para 5 o array de perguntas
+    const shuffleAndReduceQuestions = (questionsArray) => {
+    let shuffled = [...questionsArray].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 5);
+  };
+
+  // Carrega e embaralha as perguntas quando o componente é montado
   useEffect(() => {
-    setQuestions(quizQuestions); // Carrega as perguntas do arquivo JSON
+    const shuffledQuestions = shuffleAndReduceQuestions(quizQuestions);
+    setQuestions(shuffledQuestions);
   }, []);
 
   const handleAnswerClick = (answer, index) => {
@@ -24,8 +34,13 @@ const Quiz = () => {
         if (nextIndex < questions.length) {
           setCurrentQuestionIndex(nextIndex);
         } else {
-          alert("Você completou o quiz!");
-          setCurrentQuestionIndex(0);
+          if (window.confirm("Você completou o quiz! Reiniciando com novas perguntas, deseja responder novamente?")) {
+            const shuffledQuestions = shuffleAndReduceQuestions(quizQuestions);
+            setQuestions(shuffledQuestions);
+            setCurrentQuestionIndex(0);
+          } else {
+            navigate('/');
+          }
         }
       } else {
         alert("Tente outra vez.");
@@ -41,13 +56,13 @@ const Quiz = () => {
         <>
           <h3>{questions[currentQuestionIndex].question}</h3>
           {questions[currentQuestionIndex].answers.map((answer, idx) => (
-            <button key={idx} 
-                    className="custom-button" 
+            <button key={idx}
+                    className="custom-button"
                     onClick={() => handleAnswerClick(answer, idx)}
                     style={{
                       backgroundColor: selectedAnswerIndex !== null && selectedAnswerIndex === idx
                         ? isAnswerCorrect ? 'green' : 'red'
-                        : '#07377A' // Cor padrão
+                        : '#07377A'
                     }}>
               {answer}
             </button>
