@@ -9,6 +9,10 @@
 	--p-font: 1.1rem;
 }
 
+body {
+  background-color: var(--second-bg-color);
+}
+
 .container {
   display: flex;
   justify-content: center;

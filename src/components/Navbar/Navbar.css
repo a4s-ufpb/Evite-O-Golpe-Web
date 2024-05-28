@@ -14,14 +14,42 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: var(--main-color);
+    background-color: #07377A;   
 }
 
 .navbar h2 a {
-    opacity: 1;
+    color: #FFF; /* Cor do texto branco */
+    text-decoration: none;
 }
 
 .navbar ul {
     display: flex;
     gap: 1rem;
 }
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem; /* Valor redefinido de padding aqui; o 'padding: 0;' anterior será removido */
+    color: #FFF; /* Cor do texto branco */
+    border-radius: 7px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Se você tem links dentro das list items, você precisará adicionar regras CSS para 'a' tags também */
+.navbar li a {
+    color: #FFF; /* Cor do texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Permite que o padding seja aplicado corretamente */
+    width: 100%; /* Faz com que o link ocupe todo o espaço do li para melhor acessibilidade do clique */
+}
+
+/* Efeito de hover para links, se necessário */
+.navbar li a:hover {
+    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse, ou você pode escolher outra propriedade */
+}
+
+
