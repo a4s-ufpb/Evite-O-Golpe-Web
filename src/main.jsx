@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 import Home from './routes/Home/Home.jsx';
 import Quiz from './routes/Quiz/Quiz.jsx';
 import Tutorial from './routes/Tutorial/Tutorial.jsx';
+import FinalPage from './routes/Quiz/finalPage/finalPage.jsx'
 
 import './index.css'
 
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/Quiz",
+        path: "/quiz",
         element: <Quiz />
       },
       {
-        path: "/Tutorial",
+        path: "/tutorial",
         element: <Tutorial />
+      },
+      {
+        path: "/finalPage",
+        element: <FinalPage />
       }
     ]
   }

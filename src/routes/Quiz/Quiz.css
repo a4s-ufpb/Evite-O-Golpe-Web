@@ -39,9 +39,7 @@ h3 {
     background-color: #055692; /* Cor de hover */
 }
 
-.imagem {
-    height: 200px; /* Altura fixa da imagem */
-    width: auto; /* Mantém a proporção da imagem */
-    display: block; /* Permite que o margin auto funcione corretamente */
-    margin: 20px auto; /* Espaçamento superior e centralização horizontal */
+.imagem-quiz {
+    height: 200px; /* Mantém a proporção da imagem */
+    width: auto;
 }
