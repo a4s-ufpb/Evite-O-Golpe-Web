@@ -15,6 +15,7 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: #07377A;   
+    height: 2rem; /* tamanho da barra azul */
 }
 
 .navbar h2 a {

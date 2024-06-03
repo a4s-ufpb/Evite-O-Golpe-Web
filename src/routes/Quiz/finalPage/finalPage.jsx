@@ -22,7 +22,7 @@ function FinalPage() {
             <h1>Parabéns por finalizar o quiz!!</h1>
             <img className="imagem" src={imagem} alt="Descrição da imagem" />
             <button type="button" onClick={handleNavigateHome} className="btn-voltar">
-                <i className="bi bi-circle"></i>
+                <i class="bi bi-chevron-left"></i>
             </button>
             <button type="button" onClick={handleNavigateQuiz} className="btn-reinciar">
                 <i className="bi bi-arrow-repeat"></i>

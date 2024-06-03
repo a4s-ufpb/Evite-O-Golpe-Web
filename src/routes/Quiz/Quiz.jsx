@@ -43,9 +43,9 @@ const Quiz = () => {
             }
         } else {
             setErrorCount(prev => prev + 1);
-            toast.error("Está errado, pense mais um pouco e tente outra vez.", {autoClose: 2000});
+            toast.error("Não é bem isso. Tente novamente", {autoClose: 2000});
         }
-    }, 500);
+    }, 400);
   };
 
   return (
