@@ -13,6 +13,7 @@ h3 {
     color: #FFF;
     font-size: 2em;
 }
+
 .button-container {
     display: flex;
     flex-direction: column; /* Organiza os itens (botões) verticalmente */

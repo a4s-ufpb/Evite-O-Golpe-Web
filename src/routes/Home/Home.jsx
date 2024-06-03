@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imagem from '../../img/idoso.png';
-import styles from './home.module.css';
+import '../Home/home.css'; // Importação do CSS de forma global
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,12 +10,12 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="container">
         <div className="main-menu">
             <h1>Evite o Golpe</h1>
             <img className="imagem" src={imagem} alt="Descrição da imagem" />
         </div>
-        <button type="button" onClick={handleNavigate} class={styles.btn}>Iniciar</button>
+        <button type="button" onClick={handleNavigate} className="btn">Iniciar</button>
     </div>
   );
 }
