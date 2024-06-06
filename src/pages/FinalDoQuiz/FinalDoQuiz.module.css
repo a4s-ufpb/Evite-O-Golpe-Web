@@ -1,0 +1,46 @@
+/* src/pages/FinalPage/finalPage.module.css */
+h1 {
+    margin-top: 0; /* Remove a margem superior padrão do h1 */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separá-lo da imagem abaixo */
+  }
+  
+  .finalPageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha horizontalmente ao centro */
+    justify-content: center; /* Alinha verticalmente ao centro */
+    min-height: 100vh;
+    text-align: center; /* Centraliza o texto de todos os elementos de texto dentro do contêiner */
+  }
+  
+  .imagem {
+    max-width: 80%; /* Ajusta a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .btnVoltar, .btnReinciar {
+    position: absolute; /* Posicionamento absoluto para colocar nos cantos */
+    bottom: 20px; /* Espaçamento do fundo */
+    width: 50px; /* Define uma largura fixa */
+    height: 50px; /* Define uma altura fixa */
+    padding: 0; /* Remove o padding */
+    background-color: #07377A; /* Cor de fundo dos botões */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Torna o botão perfeitamente circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Alinha o conteúdo do botão verticalmente */
+    justify-content: center; /* Alinha o conteúdo do botão horizontalmente */
+    font-size: 24px; /* Ajusta o tamanho da fonte conforme necessário */
+  }
+  
+  .btnVoltar {
+    left: 20px; /* Posiciona o botão voltar no canto inferior esquerdo */
+  }
+  
+  .btnReinciar {
+    right: 20px; /* Posiciona o botão reiniciar no canto inferior direito */
+  }
+  

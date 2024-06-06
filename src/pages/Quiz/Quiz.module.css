@@ -1,0 +1,45 @@
+:root{
+	--bg-color: #0a4b75;
+	--second-bg-color: #5191c1;
+	--text-color: #ffffff;
+	--second-color: #ffffff;
+	--main-color: #ff4d05;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+}
+
+h3 {
+    color: #FFF;
+    font-size: 2em;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens (botões) verticalmente */
+    align-items: center; /* Centraliza os botões horizontalmente */
+    justify-content: center; /* Centraliza os botões verticalmente (opcional, dependendo do layout desejado) */
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    height: 100%; /* Ocupa a altura total do contêiner pai */
+}
+
+.custom-button {
+    width: 1000px;
+    margin: 10px; /* Espaçamento entre os botões */
+    padding: 10px 20px; /* Ajuste de acordo com sua necessidade para dimensionamento dos botões */
+    font-size: 1em; /* Ajuste de acordo com a legibilidade desejada */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.custom-button:hover {
+    background-color: #055692; /* Cor de hover */
+}
+
+.imagem-quiz {
+    height: 200px; /* Mantém a proporção da imagem */
+    width: auto;
+}
