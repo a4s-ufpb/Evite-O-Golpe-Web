@@ -1,0 +1,102 @@
+[
+    {
+        "question": "Qual prática ajuda a evitar golpes no WhatsApp?",
+        "answers": ["Não clicar em links de mensagens de números suspeitos", "Clicar em todos os links recebidos", "Compartilhar suas informações pessoais", "Desativar a verificação em duas etapas"],
+        "correct": "Não clicar em links de mensagens de números suspeitos"
+    },
+    {
+        "question": "Qual prática ajuda a evitar golpes no Facebook?",
+        "answers": ["Compartilhar dados privados com estranhos", "Clicar em links de propagandas das publicações de páginas suspeitas", "Desconfiar de qualquer postagem com um preço milagroso", "Acreditar em quaisquer notícias publicadas sem checar a veracidade das mesmas"],
+        "correct": "Desconfiar de qualquer postagem com um preço milagroso"
+    },
+    {
+        "question": "O que é importante fazer para evitar golpes no Instagram?",
+        "answers": ["Colocar data de nascimento como senha do instagram", "Deixar número de telefone antigo associado à conta", "Habilitar verificação em duas etapas", "Desabilitar configurações de segurança"],
+        "correct": "Habilitar verificação em duas etapas"
+    },
+    {
+        "question": "Como se proteger contra golpes bancários?",
+        "answers": ["Olhar o nome de quem é o destinatário da transferência antes de enviar", "Fazer qualquer tipo de cadastro no PIX a partir de ligações ou conversas no WhatsApp", "Deixar senhas anotadas em papéis guardados na carteira", "Usar senhas curtas e fáceis de lembrar"],
+        "correct": "Olhar o nome de quem é o destinatário da transferência antes de enviar"
+    },
+    {
+        "question": "O que devemos suspeitar ao comprar em uma loja online? (Marque a opção incorreta)",
+        "answers": ["Valores muito abaixo do que é cobrado pelo mercado", "Falta de outras fontes de informações sobre a empresa na Internet", "Não é preciso suspeitar de lojas online, pois são todas seguras", "Avisos de que a promoção está acabando em poucos instantes"],
+        "correct": "Não é preciso suspeitar de lojas online, pois são todas seguras"
+    },
+    {
+        "question": "Como devemos proteger a nossa identidade online?",
+        "answers": ["Usar a mesma senha em todas contas que tiver", "Atualizar regularmente as senhas das contas", "Ignorar as notificações de aviso de acesso da conta", "Fazer login com a conta em um site desconhecido"],
+        "correct": "Atualizar regularmente as senhas das contas"
+    },
+    {
+        "question": "O que é importante verificar ao doar para caridade online?",
+        "answers": ["Clicar em qualquer link de doação e doar", "Não verificar a existência da organização", "Doar para organização popular independentemente da causa", "Verificar a existência da ONG"],
+        "correct": "Verificar a existência da ONG"
+    },
+    {
+        "question": "Como identificar tentativas de phishing (roubo de dados pessoais)?",
+        "answers": ["Clicar rapidamente nos links recebidos por e-mails desconhecidos", "Fornecer as suas informações pessoais para qualquer site solicitado", "Verificar cuidadosamente os remetentes de e-mails", "Ignorar os avisos de segurança"],
+        "correct": "Verificar cuidadosamente os remetentes de e-mails"
+    },
+    {
+        "question": "Qual é a melhor prática para se proteger de golpes na internet?",
+        "answers": ["Compartilhar informações pessoais com estranhos", "Clicar em links suspeitos sem verificar sua autenticidade", "Manter senhas fortes e atualizadas", "Abrir anexos de e-mails de fontes desconhecidas"],
+        "correct": "Manter senhas fortes e atualizadas"
+    },
+    {
+        "question": "O que é uma notícia falsa (FakeNews)?",
+        "answers": ["Uma notícia sensacionalista publicada em um jornal de renome", "Uma notícia que contradiz suas crenças pessoais", "Uma notícia criada com o intuito de enganar e desinformar", "Uma notícia que não possui fontes citadas"],
+        "correct": "Uma notícia criada com o intuito de enganar e desinformar"
+    },
+    {
+        "question": "Como não cair em golpes telefônicos?",
+        "answers": ["Sempre compartilhar informações pessoais por telefone", "Ignorar chamadas de números desconhecidos", "Atender a todas as chamadas sem questionar", "Fornecer senhas por telefone quando solicitado"],
+        "correct": "Ignorar chamadas de números desconhecidos"
+    },
+    {
+        "question": "Qual é a melhor maneira de proteger suas senhas?",
+        "answers": ["Utilizar senhas curtas e fáceis de lembrar", "Manter a mesma senha para todas as contas", "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres", "Compartilhar senhas com amigos de confiança"],
+        "correct": "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres"
+    },
+    {
+        "question": "Como evitar cair em golpes ao baixar aplicativos em dispositivos móveis?",
+        "answers": ["Baixar apenas aplicativos de fontes confiáveis", "Instalar qualquer aplicativo disponível na loja", "Compartilhar informações pessoais durante o processo", "Ignorar as permissões solicitadas pelos aplicativos"],
+        "correct": "Baixar apenas aplicativos de fontes confiáveis"
+    },
+    {
+        "question": "O que é importante considerar ao participar de sorteios online?",
+        "answers": ["Sempre fornecer todas as informações solicitadas", "Desconfiar de sorteios que exigem pagamento para participar", "Acreditar em todas as promoções sem questionar", "Participar de todos os sorteios disponíveis para aumentar as chances"],
+        "correct": "Desconfiar de sorteios que exigem pagamento para participar"
+    },
+    {
+        "question": "Como evitar cair em golpes de empregos falsos online?",
+        "answers": ["Fornecer todas as informações pessoais no currículo", "Desconfiar de ofertas de emprego que parecem ser 'grandes demais'", "Aceitar qualquer proposta sem verificar a autenticidade da empresa", "Divulgar informações pessoais nas redes sociais após receber uma oferta"],
+        "correct": "Desconfiar de ofertas de emprego que parecem ser 'grandes demais'"
+    },
+    {
+        "question": "O que fazer ao receber mensagens suspeitas de amigos pedindo dinheiro?",
+        "answers": ["Transferir dinheiro imediatamente sem questionar se a foto for da pessoa", "Verificar a autenticidade da mensagem através de outras formas de contato", "Ignorar a mensagem e não tomar nenhuma ação", "Compartilhar publicamente informações sobre a solicitação"],
+        "correct": "Verificar a autenticidade da mensagem através de outras formas de contato"
+    },
+    {
+        "question": "Como se proteger contra golpes de phishing em mensagens de texto (SMS)?",
+        "answers": ["Clicar em todos os links recebidos via SMS", "Nunca verificar a origem de mensagens SMS", "Ignorar mensagens SMS suspeitas", "Responder a todas as mensagens SMS, mesmo desconhecidas"],
+        "correct": "Ignorar mensagens SMS suspeitas"
+    },
+    {
+        "question": "Qual é um sinal de alerta ao receber ligações de supostos suportes técnicos?",
+        "answers": ["Eles sempre pedem para desligar imediatamente", "Pedem acesso remoto ao seu computador", "Nunca mencionam problemas técnicos", "Ignoram completamente os problemas relatados"],
+        "correct": "Pedem acesso remoto ao seu computador"
+    },
+    {
+        "question": "O que fazer ao suspeitar de uma oferta de investimento online?",
+        "answers": ["Investir imediatamente sem investigar", "Verificar a reputação da empresa e procurar avaliações", "Ligar para o telefone indicado na oferta", "Compartilhar a oferta com amigos sem verificar"],
+        "correct": "Verificar a reputação da empresa e procurar avaliações"
+    },
+    {
+        "question": "Como evitar golpes em aplicativos de namoro online?",
+        "answers": ["Compartilhar informações pessoais rapidamente", "Desconfiar de perfis com informações incompletas", "Confiar em todas as declarações feitas pelos usuários", "Nunca relatar comportamentos suspeitos"],
+        "correct": "Desconfiar de perfis com informações incompletas"
+    }
+]

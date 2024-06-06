@@ -1,0 +1,44 @@
+/* eviteOgolpeWEB\eviteOgolpeWEB\src\components\Navbar\Navbar.module.css */
+@import '../../styles/variables.css';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #07377A;   
+  height: 2rem;
+}
+
+.navbar h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--text-color);
+  border-radius: 7px;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar li a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,11 @@
+/* src/styles/variables.css */
+:root {
+    --bg-color: #0a4b75;
+    --second-bg-color: #5191c1;
+    --text-color: #ffffff;
+    --second-color: #ffffff;
+    --main-color: #ff4d05;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
