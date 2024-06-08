@@ -52,7 +52,7 @@
   width: 100%;
 }
 
-.button-quiz {
+.customButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,31 +61,20 @@
   background-color: #07377A;
   color: white;
   border-radius: 7px;
-  width: 80%;
-  max-width: 400px;
+  width: 550px;
   height: 50px;
   margin: 10px 0;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s;
-}
-
-.button-quiz:hover {
-  background-color: #055692;
-}
-
-.customButton {
-    background-color: #07377A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    /* Outras estilizações comuns */
   }
   
+  .customButton:hover {
+    background-color: #055692;
+  }
+
   .correct {
     background-color: green;
   }
