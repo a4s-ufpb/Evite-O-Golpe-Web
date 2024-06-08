@@ -1,4 +1,4 @@
-/* eviteOgolpeWEB\eviteOgolpeWEB\src\pages\Home\Home.module.css */
+/* src/pages/Home/Home.module.css */
 @import '../../styles/variables.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,500&display=swap');
 
@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
 }
 
 h1 {
@@ -15,17 +15,12 @@ h1 {
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.content {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--second-bg-color);
+  
 }
 
 .title {
@@ -49,7 +44,8 @@ h1 {
   padding: 0;
 }
 
-.container div img {
-  margin-top: 1rem;
-  width: 35%;
+.imageContainer {
+  max-width: 35%; /* Ajusta a largura máxima da imagem */
+  height: auto;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }

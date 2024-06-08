@@ -1,45 +1,130 @@
-:root{
-	--bg-color: #0a4b75;
-	--second-bg-color: #5191c1;
-	--text-color: #ffffff;
-	--second-color: #ffffff;
-	--main-color: #ff4d05;
-	--big-font: 5rem;
-	--h2-font: 3rem;
-	--p-font: 1.1rem;
+/* src/pages/Quiz/Quiz.module.css */
+@import '../../styles/variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
-h3 {
-    color: #FFF;
-    font-size: 2em;
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.toast {
+  position: absolute;
+  top: 110px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.imagem {
+  width: 65%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column; /* Organiza os itens (botões) verticalmente */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    justify-content: center; /* Centraliza os botões verticalmente (opcional, dependendo do layout desejado) */
-    width: 100%; /* Ocupa a largura total do contêiner pai */
-    height: 100%; /* Ocupa a altura total do contêiner pai */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.custom-button {
-    width: 1000px;
-    margin: 10px; /* Espaçamento entre os botões */
-    padding: 10px 20px; /* Ajuste de acordo com sua necessidade para dimensionamento dos botões */
-    font-size: 1em; /* Ajuste de acordo com a legibilidade desejada */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Indica que é clicável */
-    transition: background-color 0.3s; /* Transição suave para hover */
+.button-quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #07377A;
+  color: white;
+  border-radius: 7px;
+  width: 80%;
+  max-width: 400px;
+  height: 50px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
-.custom-button:hover {
-    background-color: #055692; /* Cor de hover */
+.button-quiz:hover {
+  background-color: #055692;
 }
 
-.imagem-quiz {
-    height: 200px; /* Mantém a proporção da imagem */
-    width: auto;
+.customButton {
+    background-color: #07377A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    /* Outras estilizações comuns */
+  }
+  
+  .correct {
+    background-color: green;
+  }
+  
+  .incorrect {
+    background-color: red;
+  }
+  
+.imagemQuiz {
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
 }
+
+@media (max-width: 770px) and (min-width: 340px) {
+  .button-quiz {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 770px) {
+  .content {
+    width: 550px;
+  }
+
+  .description {
+    width: 250px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .content {
+    width: 600px;
+  }
+}
+
