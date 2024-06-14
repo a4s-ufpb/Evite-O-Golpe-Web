@@ -1,0 +1,36 @@
+.titulo {
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.containerDireita, .containerEsquerda {
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.containerDireita, .containerEsquerda h2 {
+    text-align: center;
+}
+
+.containerEsquerda, .containerDireita a, p {
+    text-align: center;
+    display: block; /* Necessário para que text-align tenha efeito */
+}
+
+.listaTutorial {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
+
+

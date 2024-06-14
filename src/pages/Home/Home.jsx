@@ -6,9 +6,13 @@ import imagem from '../../assets/idoso.png';
 
 const Home = () => {
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate('/quiz');
+  const handleNavigateToQuiz = () => {
+    navigate('/EviteOgolpeWEB/quiz');
   };
+
+  const handleNavigateToTutorial = () => {
+    navigate('/EviteOgolpeWEB/tutorial')
+  }
 
   return (
     <div className={styles.container}>
@@ -16,7 +20,8 @@ const Home = () => {
         <h1 className={styles.title}>Evite o Golpe</h1>
         <img className={styles.imageContainer} src={imagem} alt="Descrição da imagem" />
       </div>
-      <button type="button" onClick={handleNavigate} className={styles.btn}>Iniciar</button>
+      <button type="button" onClick={handleNavigateToQuiz} className={styles.btn}>Iniciar</button>
+      <button type="button" onClick={handleNavigateToTutorial} className={styles.btn}>Tutorial</button>
     </div>
   );
 }

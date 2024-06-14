@@ -6,6 +6,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
+body {
+  background-color: var(--second-bg-color);
+}
+
 .finalPageContainer {
   position: relative;
   display: flex;
@@ -17,8 +21,8 @@ h1 {
 }
 
 .imagem {
-  max-width: 80%;
-  height: auto;
+  height: 20rem;
+  width: 20em;
 }
 
 .btnVoltar, .btnReinciar {

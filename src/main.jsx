@@ -9,6 +9,7 @@ import Home from './pages/Home/Home.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx'
 import Tutorial from './pages/Tutorial/Tutorial.jsx'
 import FinalDoQuiz from './pages/FinalDoQuiz/FinalDoQuiz.jsx'
+import Informacoes from './pages/Informacoes/Informacoes.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,16 +21,20 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/quiz",
+        path: "/EviteOgolpeWEB/Quiz",
         element: <Quiz />
       },
       {
-        path: "/tutorial",
+        path: "/EviteOgolpeWEB/Tutorial",
         element: <Tutorial />
       },
       {
-        path: "/finalDoQuiz",
+        path: "/EviteOgolpeWEB/FinalDoQuiz",
         element: <FinalDoQuiz />
+      },
+      {
+        path: "/EviteOgolpeWEB/Informacoes",
+        element: <Informacoes />
       }
     ]
   }

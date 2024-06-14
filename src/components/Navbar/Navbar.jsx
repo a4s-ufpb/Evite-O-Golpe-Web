@@ -12,13 +12,13 @@ const Navbar = () => {
           <Link to='/EviteOgolpeWEB/'>Home</Link>
         </li>
         <li>
-          <Link to='/Quiz'>Quiz</Link>
+          <Link to='/EviteOgolpeWEB/Quiz'>Quiz</Link>
         </li>
         <li>
-          <Link to='/Tutorial'>Tutorial</Link>
+          <Link to='/EviteOgolpeWEB/Tutorial'>Tutorial</Link>
         </li>
         <li>
-          <a href="https://eviteogolpe.netlify.app/" target="_blank" rel="noopener noreferrer">Site</a>
+          <Link to='/EviteOgolpeWEB/Informacoes'>Informações</Link>
         </li>
         <li>
           <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer">Formulário</a>
