@@ -49,3 +49,26 @@ body {
 .btnReinciar {
   right: 20px;
 }
+
+/* Adicionando media query para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+  .finalPageContainer {
+    padding: 10px;
+    flex-direction: column; /* Garante que o layout fique empilhado verticalmente */
+  }
+
+  .imagem {
+    height: 15rem; /* Diminui o tamanho da imagem para melhor ajuste */
+    width: 15rem;
+  }
+
+  .btnVoltar, .btnReinciar {
+    width: 40px; /* Reduz o tamanho dos botões */
+    height: 40px;
+    font-size: 18px; /* Reduz o tamanho do ícone dentro do botão */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para cabeçalhos */
+  }
+}

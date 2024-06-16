@@ -1,0 +1,86 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color, #0a4b75); /* Utilizando a variável CSS com fallback */
+  padding: 20px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: relative; /* Adicionando posição relativa para controle de z-index */
+  z-index: 500; /* Certifique-se de que o navbar tem um z-index menor que o do ícone de minimizar */
+  height: 60px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Menor z-index dentro do nav */
+}
+
+.navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: #17cf97;
+}
+
+.navbar li a:hover::after,
+.navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #17cf97;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  z-index: 1000; /* Maior z-index para garantir visibilidade */
+  position: absolute; /* Usando posição absoluta para controlar a localização */
+  top: 20px; /* Ajuste conforme necessário */
+  right: 20px; /* Ajuste conforme necessário */
+}
+
+@media screen and (max-width: 769px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 90px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--bg-color, #0a4b75); /* Utilizando a variável CSS com fallback */
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+    z-index: 2; /* Assegurar que ainda está abaixo do ícone de minimizar */
+  }
+
+  .navbar.active {
+    right: 0px;
+  }
+
+  .navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: block;
+  }
+}

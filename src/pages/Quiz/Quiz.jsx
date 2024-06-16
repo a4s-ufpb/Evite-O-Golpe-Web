@@ -40,7 +40,7 @@ const Quiz = () => {
         if (nextIndex < questions.length) {
           setCurrentQuestionIndex(nextIndex);
         } else {
-          navigate('/finalDoQuiz', { state: { errorCount } });
+          navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount } });
         }
       } else {
         setErrorCount(prev => prev + 1);
