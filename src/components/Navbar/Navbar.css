@@ -1,24 +1,49 @@
+:root {
+  --bg-color: #0a4b75; /* Definindo cores no root para facilidade de uso */
+  --fontColorAzul: #007bff;
+  --fontColorAmarelo: #ffd700;
+  --fontColorBranco: #ffffff;
+  --highlightColor: #ffc107;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-color, #0a4b75); /* Utilizando a variável CSS com fallback */
-  padding: 20px 20px;
+  background: var(--f, #f0f0f0); /* Fallback default caso var(--f) não esteja definido */
+  padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  position: relative; /* Adicionando posição relativa para controle de z-index */
-  z-index: 500; /* Certifique-se de que o navbar tem um z-index menor que o do ícone de minimizar */
+  position: relative;
+  z-index: 500;
   height: 60px;
+}
+
+nav h1 {
+  color: var(--fontColorAzul);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+}
+
+nav h1 a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: inherit;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1; /* Menor z-index dentro do nav */
+  z-index: 1;
+  list-style: none;
 }
 
 .navbar li {
-  list-style: none;
   padding: 0 20px;
   position: relative;
 }
@@ -27,13 +52,13 @@ nav {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fff;
-  transition: 0.3s ease-in-out;
+  color: var(--fontColorAmarelo);
+  transition: color 0.3s ease-in-out;
 }
 
 .navbar li a:hover,
 .navbar li a.active {
-  color: #17cf97;
+  color: var(--fontColorBranco);
 }
 
 .navbar li a:hover::after,
@@ -41,23 +66,22 @@ nav {
   content: "";
   width: 30%;
   height: 2px;
-  background: #17cf97;
+  background: var(--fontColorBranco);
   position: absolute;
   bottom: -4px;
   left: 20px;
 }
 
 #mobile {
-  display: none;
-  z-index: 1000; /* Maior z-index para garantir visibilidade */
-  position: absolute; /* Usando posição absoluta para controlar a localização */
-  top: 20px; /* Ajuste conforme necessário */
-  right: 20px; /* Ajuste conforme necessário */
+  display: none; /* Será mudado via media query */
+  z-index: 1000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 @media screen and (max-width: 769px) {
   .navbar {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -66,14 +90,14 @@ nav {
     right: -300px;
     width: 300px;
     height: 100vh;
-    background: var(--bg-color, #0a4b75); /* Utilizando a variável CSS com fallback */
+    background: var(--bg-color);
     padding: 40px 0 0 10px;
-    transition: 0.3s ease-in-out;
-    z-index: 2; /* Assegurar que ainda está abaixo do ícone de minimizar */
+    transition: right 0.3s ease-in-out; /* Simplificado */
+    z-index: 2;
   }
 
   .navbar.active {
-    right: 0px;
+    right: 0;
   }
 
   .navbar li {

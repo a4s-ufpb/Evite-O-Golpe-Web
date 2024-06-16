@@ -9,22 +9,18 @@
   font-family: var(--font-family);
 }
 
-h1 {
-  color: #FFF;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--second-bg-color);
+  background-color: var(--backgroundClaro);
   
 }
 
 .title {
-  color: #07377A;
+  color: var(--fontColorAmarelo);
   padding: 0.5rem;
   font-weight: 700;
   margin: 1rem 0 0 0;
@@ -32,8 +28,8 @@ h1 {
 }
 
 .btn {
-  background-color: #07377A;
-  color: white;
+  background-color: var(--fontColorAmarelo);
+  color: var(--f);
   border-radius: 7px;
   width: 350px;
   height: 50px;
@@ -47,7 +43,8 @@ h1 {
 .imageContainer {
   max-width: 35%; /* Ajusta a largura máxima da imagem */
   height: auto;
-  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  margin: 0; /* Centraliza a imagem horizontalmente */
+  padding: 0;
 }
 
 /* Estilos para dispositivos móveis */

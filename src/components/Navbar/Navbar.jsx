@@ -1,50 +1,54 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';  // Certifique-se de que os estilos estão configurados corretamente
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 import Menu from '../../assets/menu.png';  // Verifique se o caminho está correto
 import Minimize from '../../assets/minimize.png';  // Verifique se o caminho está correto
 
-class Navbar extends Component {
-  state = { clicked: false };
+function Navbar() {
+  const [clicked, setClicked] = useState(false);
+  const location = useLocation();  // Hook para obter o caminho atual
 
-  toggleMenu = () => {
-    this.setState(prevState => ({ clicked: !prevState.clicked }));
-  }
+  const toggleMenu = () => {
+    setClicked(!clicked);
+  };
 
-  closeMenu = () => {
-    this.setState({ clicked: false });
-  }
+  const closeMenu = () => {
+    setClicked(false);
+  };
 
-  render() {
-    return (
-      <nav>
-        <h1>
-          <Link to="/EviteOgolpeWEB/">Evite o golpe</Link>
-        </h1>
+  // Função para verificar se a rota atual é a rota do link
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
-        <ul className={this.state.clicked ? 'navbar active' : 'navbar'}>
-          <li>
-            <Link to="/EviteOgolpeWEB/" className="active" onClick={this.closeMenu}>Home</Link>
-          </li>
-          <li>
-            <Link to="/EviteOgolpeWEB/Quiz" onClick={this.closeMenu}>Quiz</Link>
-          </li>
-          <li>
-            <Link to="/EviteOgolpeWEB/Tutorial" onClick={this.closeMenu}>Tutorial</Link>
-          </li>
-          <li>
-            <Link to="/EviteOgolpeWEB/Informacoes" onClick={this.closeMenu}>Informações</Link>
-          </li>
-          <li>
-            <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer" onClick={this.closeMenu}>Formulário</a>
-          </li>
-        </ul>
-        <div id="mobile" onClick={this.toggleMenu}>
-          <img src={this.state.clicked ? Minimize : Menu} alt={this.state.clicked ? "Close Menu" : "Open in Menu"} />
-        </div>
-      </nav>
-    );
-  }
+  return (
+    <nav>
+      <h1>
+        <Link to="/EviteOgolpeWEB/">Evite o golpe</Link>
+      </h1>
+
+      <ul className={clicked ? 'navbar active' : 'navbar'}>
+        <li>
+          <Link to="/EviteOgolpeWEB/" className={isActive("/EviteOgolpeWEB/") ? "active" : "notActive"} onClick={closeMenu}>Home</Link>
+        </li>
+        <li>
+          <Link to="/EviteOgolpeWEB/Quiz" className={isActive("/EviteOgolpeWEB/Quiz") ? "active" : ""} onClick={closeMenu}>Quiz</Link>
+        </li>
+        <li>
+          <Link to="/EviteOgolpeWEB/Tutorial" className={isActive("/EviteOgolpeWEB/Tutorial") ? "active" : ""} onClick={closeMenu}>Tutorial</Link>
+        </li>
+        <li>
+        <Link to="/EviteOgolpeWEB/Informacoes" className={isActive("/EviteOgolpeWEB/Informacoes") ? "active" : "inactive"} onClick={closeMenu}>Informações</Link>
+        </li>
+        <li>
+          <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Formulário</a>
+        </li>
+      </ul>
+      <div id="mobile" onClick={toggleMenu}>
+        <img src={clicked ? Minimize : Menu} alt={clicked ? "Close Menu" : "Open in Menu"} />
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;

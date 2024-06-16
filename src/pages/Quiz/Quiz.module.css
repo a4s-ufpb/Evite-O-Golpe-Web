@@ -49,8 +49,8 @@
 }
 
 .customButton {
-  background-color: #07377A;
-  color: white;
+  background-color: var(--fontColorAmarelo);
+  color: var(--f);
   border-radius: 7px;
   width: 100%; /* Torna os botões responsivos */
   max-width: 550px; /* Limita o tamanho máximo do botão */
@@ -64,7 +64,7 @@
 }
 
 .customButton:hover {
-  background-color: #055692;
+  background-color: var(--colorYellowHover);
 }
 
 .correct {
