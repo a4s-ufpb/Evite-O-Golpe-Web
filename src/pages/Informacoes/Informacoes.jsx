@@ -1,8 +1,6 @@
-// Informacoes.jsx
 import React from 'react';
 import styles from './Informacoes.module.css';
 import imagem from '../../assets/idoso.png';
-
 
 const Informacoes = () => {
     return (
@@ -12,8 +10,8 @@ const Informacoes = () => {
                 
                 <div className={styles.containerEsquerda}>
                     <h2>Sites</h2>
+                    <p>Aquila Saxum Lux quila Saxum Lux quila Saxum Lux quila Saxum Lux</p>
                     <ul className={styles.listaTutorial}>
-                        <p>Aquila Saxum Lux quila Saxum Lux quila Saxum Lux quila Saxum Lux </p>
                         <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
                         <p>Aquila Saxum Lux quila Saxum Lux quila Saxum Lux quila Saxum Lux</p>
                         <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
@@ -24,8 +22,8 @@ const Informacoes = () => {
 
                 <div className={styles.containerDireita}>
                     <h2>Vídeos</h2>
+                    <p>Aquila Saxum Lu quila Saxum Lux quila Saxum Lux quila Saxum Luxx</p>
                     <ul className={styles.listaTutorial}>
-                        <p>Aquila Saxum Lu quila Saxum Lux quila Saxum Lux quila Saxum Luxx</p>
                         <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
                         <p>Aquila Saxum LuxAquila Saxum Lu quila Saxum Lux quila Saxum Lux quila Saxum Luxx</p>
                         <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>

@@ -49,3 +49,25 @@ h1 {
   height: auto;
   margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    margin: 0.5rem 0;
+  }
+
+  .btn {
+    width: 80%; /* Reduz a largura dos botões para se adaptar a telas menores */
+    font-size: 1.2rem; /* Reduz o tamanho da fonte nos botões */
+  }
+
+  .imageContainer {
+    max-width: 50%; /* Aumenta a largura máxima da imagem para melhor visibilidade em telas pequenas */
+  }
+
+  .container {
+    padding: 1rem; /* Adiciona um pouco de padding ao redor do conteúdo para não ficar muito grudado nas bordas */
+  }
+}

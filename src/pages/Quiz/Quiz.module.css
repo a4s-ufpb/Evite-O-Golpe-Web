@@ -28,21 +28,17 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.toast {
-  position: absolute;
-  top: 110px;
-}
-
 .title {
-  font-size: 1rem;
+  font-size: 1.5rem; /* Ajustado para melhor legibilidade */
   margin-bottom: 20px;
   color: var(--text-color);
 }
 
-.imagem {
-  width: 65%;
-  max-width: 500px;
-  margin-bottom: 20px;
+.imagemQuiz {
+  width: 100%; /* Torna a imagem responsiva */
+  max-width: 15rem; /* Limita o tamanho máximo da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  padding: 1rem;
 }
 
 .button-container {
@@ -53,67 +49,53 @@
 }
 
 .customButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
   background-color: #07377A;
   color: white;
   border-radius: 7px;
-  width: 550px;
+  width: 100%; /* Torna os botões responsivos */
+  max-width: 550px; /* Limita o tamanho máximo do botão */
   height: 50px;
   margin: 10px 0;
   padding: 10px 20px;
-  font-size: 13px;
+  font-size: 1rem; /* Ajusta o tamanho da fonte */
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s;
-  }
-  
-  .customButton:hover {
-    background-color: #055692;
-  }
-
-  .correct {
-    background-color: green !important;
-  }
-  
-  .incorrect {
-    background-color: red !important;
-  }
-  
-.imagemQuiz {
-  width: 15rem;
-  height: 15rem;
-  padding: 1rem;
 }
 
-@media (max-width: 770px) and (min-width: 340px) {
-  .button-quiz {
-    width: 90%;
-    font-size: 1rem;
-  }
+.customButton:hover {
+  background-color: #055692;
 }
 
-@media (max-width: 900px) and (min-width: 770px) {
+.correct {
+  background-color: green !important;
+}
+
+.incorrect {
+  background-color: red !important;
+}
+
+@media (max-width: 900px) {
   .content {
-    width: 550px;
+    padding: 10px;
+    max-width: 100%; /* Permite que o conteúdo expanda para a largura total em telas menores */
   }
 
-  .description {
-    width: 250px;
-    margin: 0;
+  .title {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte do título para telas menores */
   }
 
-  p {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 900px) {
-  .content {
-    width: 600px;
+  .customButton {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos botões */
   }
 }
 
+@media (max-width: 600px) {
+  .imagemQuiz {
+    max-width: 10rem; /* Reduz ainda mais o tamanho da imagem em telas muito pequenas */
+  }
+
+  .customButton {
+    padding: 8px 16px; /* Reduz o padding dos botões para se ajustarem melhor */
+  }
+}

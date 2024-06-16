@@ -1,5 +1,9 @@
+/* Estilização básica */
 .titulo {
     text-align: center;
+    font-size: 24px; 
+    color: #07377A;
+    padding: 20px 0;
 }
 
 .wrapper {
@@ -13,24 +17,85 @@
 .containerDireita, .containerEsquerda {
     padding: 20px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
 }
 
-.containerDireita, .containerEsquerda h2 {
+.containerDireita h2, .containerEsquerda h2 {
     text-align: center;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.containerEsquerda, .containerDireita a, p {
+.containerEsquerda p, .containerDireita p,
+.containerEsquerda a, .containerDireita a {
     text-align: center;
-    display: block; /* Necessário para que text-align tenha efeito */
+    display: block;
+    margin: 10px 0;
+    color: #555;
 }
 
 .listaTutorial {
     padding: 0;
     list-style-type: none;
+    margin-top: 20px;
 }
 
+.listaTutorial li {
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
+.listaTutorial li a {
+    text-decoration: none;
+    color: #0645AD;
+    font-weight: bold;
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Empilha os containers verticalmente em telas menores */
+    }
 
+    .containerDireita, .containerEsquerda {
+        margin: 10px 0; /* Ajusta as margens para layout vertical */
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    }
 
+    .titulo {
+        font-size: 20px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .containerDireita h2, .containerEsquerda h2 {
+        font-size: 16px; /* Reduz o tamanho da fonte dos subtítulos */
+    }
+
+    .containerEsquerda p, .containerDireita p,
+    .containerEsquerda a, .containerDireita a {
+        font-size: 14px; /* Reduz o tamanho da fonte para melhor legibilidade em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 18px; /* Reduz ainda mais o tamanho da fonte do título para telas muito pequenas */
+    }
+
+    .containerDireita h2, .containerEsquerda h2 {
+        font-size: 15px; /* Ajusta o tamanho da fonte dos subtítulos para telas muito pequenas */
+    }
+
+    .containerDireita, .containerEsquerda {
+        padding: 15px; /* Reduz o padding para economizar espaço */
+    }
+
+    .listaTutorial li {
+        padding: 8px; /* Reduz o padding dos itens da lista */
+    }
+}

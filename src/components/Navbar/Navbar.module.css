@@ -3,51 +3,82 @@
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  flex-direction: column;
   background-color: #07377A;
-  height: 2rem;
 }
 
-.navbar h2 a {
-  color: var(--text-color);
-  text-decoration: none;
+.desktopNavbar, .mobileNavbar {
+  display: none;
 }
 
-.navbar ul {
-  display: flex;
-  gap: 1rem;
+/* Estilo para desktop */
+@media (min-width: 1025px) {
+  .desktopNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .desktopNavbar h2 a, .desktopNavbar ul {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .desktopNavbar ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .desktopNavbar li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    border-radius: 7px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .desktopNavbar li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .desktopNavbar li a:hover {
+    text-decoration: underline;
+  }
 }
 
-.navbar li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  color: var(--text-color);
-  border-radius: 7px;
-  font-weight: bolder;
-  cursor: pointer;
-}
+/* Estilo para mobile */
+@media (max-width: 1024px) {
+  .mobileNavbar {
+    display: block;
+    background-color: #07377A;  /* Define a cor de fundo do navbar móvel */
+  }
 
-.navbar li a {
-  color: var(--text-color);
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
-}
+  .mobileNavbar .icon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-.navbar li a:hover {
-  text-decoration: underline;
-}
+  .mobileNavbar .icon img {
+    width: 100%;
+    height: auto;
+  }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+  /* TODO: fazer com que a navbar fique parecendo mobile, pois os icones não estão */
+  .mobileNavbar h2 {
+    display: none; /* Ocultar o nome quando o menu móvel estiver ativo */
+  }
 }
