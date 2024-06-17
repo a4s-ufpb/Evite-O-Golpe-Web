@@ -86,7 +86,7 @@ nav h1 a {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 90px;
+    top: 0px;
     right: -300px;
     width: 300px;
     height: 100vh;
@@ -94,6 +94,16 @@ nav h1 a {
     padding: 40px 0 0 10px;
     transition: right 0.3s ease-in-out; /* Simplificado */
     z-index: 2;
+  }
+
+  .menu-style {
+    height: 30px;
+    transform: translateY(-5px); /* Ajusta para subir a imagem. -10px é apenas um exemplo. */
+  }
+
+  .minimize-style {
+    height: 40px;
+    transform: translateY(-23px);
   }
 
   .navbar.active {

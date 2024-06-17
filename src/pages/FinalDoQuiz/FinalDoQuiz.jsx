@@ -14,7 +14,7 @@ function FinalDoQuiz() {
     };
     
     const handleNavigateQuiz = () => {
-        navigate('/quiz');
+        navigate('/EviteOgolpeWEB/quiz');
     };
 
     return (

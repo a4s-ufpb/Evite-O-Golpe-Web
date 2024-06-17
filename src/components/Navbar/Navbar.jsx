@@ -45,7 +45,7 @@ function Navbar() {
         </li>
       </ul>
       <div id="mobile" onClick={toggleMenu}>
-        <img src={clicked ? Minimize : Menu} alt={clicked ? "Close Menu" : "Open in Menu"} />
+        <img src={clicked ? Minimize : Menu} alt={clicked ? "Close Menu" : "Open in Menu"} className={clicked ? "minimize-style" : "menu-style"}/>
       </div>
     </nav>
   );

@@ -21,10 +21,9 @@
 
 .title {
   color: var(--fontColorAmarelo);
-  padding: 0.5rem;
-  font-weight: 700;
-  margin: 1rem 0 0 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); /* Sombra preta com meio transparente */
+
 }
 
 .btn {
@@ -33,7 +32,8 @@
   border-radius: 7px;
   width: 350px;
   height: 50px;
-  margin: 1.5rem 0;
+  margin: 10px;
+  margin-top: 0;
   box-shadow: 0 8px 5px #07377a3f;
   font-size: 1.5rem;
   font-weight: bold;
@@ -41,7 +41,7 @@
 }
 
 .imageContainer {
-  max-width: 35%; /* Ajusta a largura máxima da imagem */
+  max-width: 50%; /* Ajusta a largura máxima da imagem */
   height: auto;
   margin: 0; /* Centraliza a imagem horizontalmente */
   padding: 0;
