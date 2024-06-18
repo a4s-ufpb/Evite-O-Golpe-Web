@@ -1,22 +1,23 @@
 /* Tutorial.module.css */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-  
 .imageContainer {
     width: 15rem;
     height: 15rem;
     padding: 1rem;
-    display: block; /* Garantir que a imagem seja um bloco */
+    display: block; /* Garantir que a imagem seja um bloco */  
     margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
 
 .funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
     margin-bottom: 30px; /* Espaçamento entre os blocos */
     padding: 0 20px; /* Padding lateral para não colar no borda em telas menores */
+}
+
+.funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
+    text-align: center;
+}
+
+.funcionamentoQuiz h2, .funcionamentoFormulario h2, .funcionamentoInformacoes h2 {
+    text-align: center;
 }
 
 /* Media Queries para ajustes em telas menores */
