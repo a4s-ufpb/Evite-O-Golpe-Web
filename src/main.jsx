@@ -10,6 +10,7 @@ import Quiz from './pages/Quiz/Quiz.jsx'
 import Tutorial from './pages/Tutorial/Tutorial.jsx'
 import FinalDoQuiz from './pages/FinalDoQuiz/FinalDoQuiz.jsx'
 import Informacoes from './pages/Informacoes/Informacoes.jsx'
+import Usuario from './pages/InformacaoUsuario/InformacaoUsuario.jsx'
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/EviteOgolpeWEB/Informacoes",
         element: <Informacoes />
+      },
+      {
+        path: "/EviteOgolpeWEB/InformacaoUsuario",
+        element: <Usuario />
       }
     ]
   }

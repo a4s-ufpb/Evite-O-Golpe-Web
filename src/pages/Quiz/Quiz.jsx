@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import quizQuestions from '../../data/questions.json';
-import { useNavigate } from 'react-router-dom';
 import imagem from '../../assets/idoso.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import axios from 'axios';
 import styles from './Quiz.module.css';
 
 const Quiz = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { userID } = location.state || { userID: sessionStorage.getItem('userID') || 'DefaultUserID' };
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [questions, setQuestions] = useState([]);
-  const [errorCount, setErrorCount] = useState(0); // Estado para contar os erros
+  const [errorCount, setErrorCount] = useState(0);
 
   const shuffleAndReduceQuestions = (questionsArray) => {
     let shuffled = [...questionsArray].sort(() => 0.5 - Math.random());
@@ -26,11 +28,41 @@ const Quiz = () => {
     setQuestions(shuffledQuestions);
   }, []);
 
-  const handleAnswerClick = (answer, index) => {
+  const saveResponseQuestion = async (response) => {
+    try {
+      const result = await axios.post('https://activities.a4s.dev.br/api/response', response);
+      return result.data;
+    } catch (error) {
+      console.error('Error saving response:', error);
+      alert('Houve um erro ao se conectar, você está usando o sistema offline!');
+      return null;
+    }
+  };
+
+  const handleAnswerClick = async (answer, index) => {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = answer === currentQuestion.correct;
     setSelectedAnswerIndex(index);
     setIsAnswerCorrect(isCorrect);
+
+    const response = {
+      userID: userID,
+      idApp: "WEB-EVITE-O-GOLPE 1.0",
+      phase: "",
+      activity: "",
+      selectedAnswer: answer,
+      expectedResponse: currentQuestion.correct,
+      question: currentQuestion.question,
+      isCorrect: isCorrect,
+      dateResponse: new Date().toISOString(),
+      typeOfQuestion: "MULTIPLA ESCOLHA"
+    };
+
+    try {
+      await saveResponseQuestion(response);
+    } catch (error) {
+      console.error('Error saving response:', error);
+    }
 
     setTimeout(() => {
       setSelectedAnswerIndex(null);
