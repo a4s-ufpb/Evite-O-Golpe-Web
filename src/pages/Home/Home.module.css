@@ -41,7 +41,7 @@
 }
 
 .imageContainer {
-  max-width: 50%; /* Ajusta a largura máxima da imagem */
+  max-width: 70vh; /* Ajusta a largura máxima da imagem */
   height: auto;
   margin: 0; /* Centraliza a imagem horizontalmente */
   padding: 0;
