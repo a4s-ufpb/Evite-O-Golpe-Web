@@ -50,9 +50,9 @@ const Quiz = () => {
     const response = {
       userID: userID,
       idApp: "WEB-EVITE-O-GOLPE 1.0",
-      phase: "Fase 1",
+      phase: "1",
       activity: activityValue,
-      selectedAnswer: answer,
+      userResponse: answer,
       expectedResponse: currentQuestion.correct,
       question: currentQuestion.question,
       isCorrect: isCorrect,

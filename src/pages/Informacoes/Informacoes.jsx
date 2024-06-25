@@ -7,7 +7,7 @@ const Informacoes = () => {
         <div>
             <h1 className={styles.titulo}>Lista de materiais</h1>
             <div className={styles.wrapper}>
-                <div className={styles.containerEsquerda}>
+                <div className={styles.containerPrimario}>
                     <h2>Sites</h2>  
                     <ul className={styles.listaTutorial}>
                         <p>Use frases complexas como senhas, incorporando caracteres especiais e variando entre maiúsculas e minúsculas para aumentar a segurança</p>
@@ -20,7 +20,7 @@ const Informacoes = () => {
                         <li><a href="https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/" target="_blank" rel="noopener noreferrer">https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/</a></li>
                     </ul>
                 </div>
-                <div className={styles.containerDireita}>
+                <div className={styles.containerSecundario}>
                     <h2>Vídeos</h2>
                     <ul className={styles.listaTutorial}>
                         <p>Golpe do amor nas redes sociais</p>

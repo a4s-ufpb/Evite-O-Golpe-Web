@@ -12,9 +12,11 @@
     padding: 20px;
     height: 100vh;
     box-sizing: border-box;
+    flex-direction: column; /* Adiciona esta linha */
 }
 
-.containerDireita, .containerEsquerda {
+
+.containerPrimario, .containerSecundario {
     padding: 20px;
     margin: 10px;
     font-size: 18px;
@@ -24,14 +26,14 @@
     flex: 1;
 }
 
-.containerDireita h2, .containerEsquerda h2 {
+.containerPrimario h2, .containerSecundario h2 {
     text-align: center;
     color: #333;
     margin-bottom: 15px;
 }
 
-.containerEsquerda p, .containerDireita p,
-.containerEsquerda a, .containerDireita a {
+.containerPrimario p, .containerSecundario p,
+.containerPrimario a, .containerSecundario a {
     text-align: center;
     display: block;
     margin: 10px 0;
@@ -63,7 +65,7 @@
         flex-direction: column; /* Empilha os containers verticalmente em telas menores */
     }
 
-    .containerDireita, .containerEsquerda {
+    .containerPrimario, .containerSecundario {
         margin: 10px 0; /* Ajusta as margens para layout vertical */
         width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
     }
@@ -72,12 +74,12 @@
         font-size: 20px; /* Reduz o tamanho da fonte do título */
     }
 
-    .containerDireita h2, .containerEsquerda h2 {
+    .containerPrimario h2, .containerSecundario h2 {
         font-size: 16px; /* Reduz o tamanho da fonte dos subtítulos */
     }
 
-    .containerEsquerda p, .containerDireita p,
-    .containerEsquerda a, .containerDireita a {
+    .containerPrimario p, .containerSecundario p,
+    .containerPrimario a, .containerSecundario a {
         font-size: 14px; /* Reduz o tamanho da fonte para melhor legibilidade em telas menores */
     }
 }
@@ -87,11 +89,11 @@
         font-size: 18px; /* Reduz ainda mais o tamanho da fonte do título para telas muito pequenas */
     }
 
-    .containerDireita h2, .containerEsquerda h2 {
+    .containerPrimario h2, .containerSecundario h2 {
         font-size: 15px; /* Ajusta o tamanho da fonte dos subtítulos para telas muito pequenas */
     }
 
-    .containerDireita, .containerEsquerda {
+    .containerPrimario, .containerSecundario {
         padding: 15px; /* Reduz o padding para economizar espaço */
     }
 
