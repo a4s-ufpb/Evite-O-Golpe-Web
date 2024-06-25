@@ -23,6 +23,7 @@ body {
 .imagem {
   height: 20rem;
   width: 20em;
+  margin: 3rem;
 }
 
 .btnVoltar, .btnReinciar {

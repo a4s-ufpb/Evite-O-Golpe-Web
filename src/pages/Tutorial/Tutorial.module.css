@@ -9,11 +9,12 @@
 
 .funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
     margin-bottom: 30px; /* Espaçamento entre os blocos */
-    padding: 0 20px; /* Padding lateral para não colar no borda em telas menores */
+    padding: 0 20px; /* Padding lateral para não colar na borda em telas menores */
 }
 
 .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
-    text-align: center;
+    text-align: left; /* Alinhamento à esquerda */
+    margin-left: 30px; /* Margem à esquerda para separar o texto da borda */
 }
 
 .funcionamentoQuiz h2, .funcionamentoFormulario h2, .funcionamentoInformacoes h2 {
@@ -29,6 +30,7 @@
 
     .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
         font-size: 0.9rem; /* Reduz o tamanho da fonte para melhorar a legibilidade */
+        margin-left: 20px; /* Margem ajustada para telas menores */
     }
 }
 
@@ -44,5 +46,6 @@
 
     .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
         font-size: 0.8rem; /* Ainda menor para garantir legibilidade em dispositivos muito pequenos */
+        margin-left: 10px; /* Margem reduzida ainda mais para pequenas telas */
     }
 }

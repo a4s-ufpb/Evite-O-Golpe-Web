@@ -1,22 +1,36 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './InformacaoUsuario.module.css'; // Certifique-se de que o caminho está correto
+import axios from 'axios';
+import styles from './InformacaoUsuario.module.css';
 
 const InformacaoUsuario = () => {
   const [userID, setUserID] = useState('');
   const navigate = useNavigate();
+  const API_URL = 'https://activities.a4s.dev.br/api/user';
 
-  const handleSubmit = (e) => {
-    e.preventDefault();  // Impede o comportamento padrão do formulário
-    if (userID.trim()) {  // Checa se o userID não é apenas espaços em branco
-      sessionStorage.setItem('userID', userID);  // Salva o userID no sessionStorage
-      navigate('/EviteOgolpeWEB/Quiz');  // Navega para a página do quiz
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (userID.trim()) {
+      try {
+        const response = await axios.post(API_URL, { userID });
+        console.log('User saved:', response.data);
+        sessionStorage.setItem('userID', userID);
+        navigate('/EviteOgolpeWEB/Quiz'); 
+      } catch (error) {
+        console.error('Error saving user:', error);
+      }
     }
   };
 
-  const handleAnonymousSubmit = () => {
-    sessionStorage.setItem('userID', 'Anonymous');  // Define o userID como 'Anonymous'
-    navigate('/EviteOgolpeWEB/Quiz');  // Navega para a página do quiz
+  const handleAnonymousSubmit = async () => {
+    try {
+      const response = await axios.post(API_URL, { userID: 'Anonymous' });
+      console.log('Anonymous user saved:', response.data);
+      sessionStorage.setItem('userID', 'Anonymous');
+      navigate('/EviteOgolpeWEB/Quiz');
+    } catch (error) {
+      console.error('Error saving anonymous user:', error);
+    }
   };
 
   return (

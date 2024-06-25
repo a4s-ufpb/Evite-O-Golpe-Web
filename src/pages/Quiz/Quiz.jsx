@@ -45,11 +45,13 @@ const Quiz = () => {
     setSelectedAnswerIndex(index);
     setIsAnswerCorrect(isCorrect);
 
+    const activityValue = `P${currentQuestionIndex + 1}`;
+
     const response = {
       userID: userID,
       idApp: "WEB-EVITE-O-GOLPE 1.0",
-      phase: "",
-      activity: "",
+      phase: "Fase 1",
+      activity: activityValue,
       selectedAnswer: answer,
       expectedResponse: currentQuestion.correct,
       question: currentQuestion.question,

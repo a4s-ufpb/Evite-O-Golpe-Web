@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import Menu from '../../assets/menu.png';  // Verifique se o caminho está correto
-import Minimize from '../../assets/minimize.png';  // Verifique se o caminho está correto
+import Menu from '../../assets/menu.png';  
+import Minimize from '../../assets/minimize.png';  
 
 function Navbar() {
   const [clicked, setClicked] = useState(false);
-  const location = useLocation();  // Hook para obter o caminho atual
+  const location = useLocation();
 
   const toggleMenu = () => {
     setClicked(!clicked);
@@ -16,7 +16,6 @@ function Navbar() {
     setClicked(false);
   };
 
-  // Função para verificar se a rota atual é a rota do link
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -38,10 +37,10 @@ function Navbar() {
           <Link to="/EviteOgolpeWEB/Tutorial" className={isActive("/EviteOgolpeWEB/Tutorial") ? "active" : ""} onClick={closeMenu}>Tutorial</Link>
         </li>
         <li>
-        <Link to="/EviteOgolpeWEB/Informacoes" className={isActive("/EviteOgolpeWEB/Informacoes") ? "active" : "inactive"} onClick={closeMenu}>Informações</Link>
+        <Link to="/EviteOgolpeWEB/Informacoes" className={isActive("/EviteOgolpeWEB/Informacoes") ? "active" : "inactive"} onClick={closeMenu}>Mais Informações</Link>
         </li>
         <li>
-          <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Formulário</a>
+          <a href="https://forms.gle/V4efQE8qwpShMZ1r7" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Feedback</a>
         </li>
       </ul>
       <div id="mobile" onClick={toggleMenu}>
