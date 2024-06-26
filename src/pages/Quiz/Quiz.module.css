@@ -1,4 +1,3 @@
-/* src/pages/Quiz/Quiz.module.css */
 @import '../../styles/variables.css';
 
 * {
@@ -30,15 +29,15 @@
 }
 
 .title {
-  font-size: 1.5rem; /* Ajustado para melhor legibilidade */
+  font-size: 1.5rem; 
   margin-bottom: 20px;
   color: var(--text-color);
 }
 
 .imagemQuiz {
-  width: 100%; /* Torna a imagem responsiva */
-  max-width: 15rem; /* Limita o tamanho máximo da imagem */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%; 
+  max-width: 15rem; 
+  height: auto; 
   padding: 1rem;
 }
 
@@ -46,11 +45,11 @@
   background-color: var(--fontColorAmarelo);
   color: var(--f);
   border-radius: 7px;
-  width: 100%; /* Torna os botões responsivos */
-  max-width: 550px; /* Limita o tamanho máximo do botão */
+  width: 100%; 
+  max-width: 550px; 
   margin: 10px 0;
   padding: 10px 20px;
-  font-size: 1rem; /* Ajusta o tamanho da fonte */
+  font-size: 1rem; 
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s;
@@ -71,24 +70,24 @@
 @media (max-width: 900px) {
   .content {
     padding: 10px;
-    max-width: 100%; /* Permite que o conteúdo expanda para a largura total em telas menores */
+    max-width: 100%;
   }
 
   .title {
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte do título para telas menores */
+    font-size: 1.2rem; 
   }
 
   .customButton {
-    font-size: 0.9rem; /* Reduz o tamanho da fonte dos botões */
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 600px) {
   .imagemQuiz {
-    max-width: 10rem; /* Reduz ainda mais o tamanho da imagem em telas muito pequenas */
+    max-width: 10rem; 
   }
 
   .customButton {
-    padding: 8px 16px; /* Reduz o padding dos botões para se ajustarem melhor */
+    padding: 8px 16px; 
   }
 }

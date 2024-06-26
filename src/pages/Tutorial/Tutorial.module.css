@@ -3,49 +3,48 @@
     width: 15rem;
     height: 15rem;
     padding: 1rem;
-    display: block; /* Garantir que a imagem seja um bloco */  
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block;   
+    margin: 0 auto; 
 }
 
 .funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
-    margin-bottom: 30px; /* Espaçamento entre os blocos */
-    padding: 0 20px; /* Padding lateral para não colar na borda em telas menores */
+    margin-bottom: 30px; 
+    padding: 0 20px; 
 }
 
 .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
-    text-align: left; /* Alinhamento à esquerda */
-    margin-left: 30px; /* Margem à esquerda para separar o texto da borda */
+    text-align: left; 
+    margin-left: 30px; 
 }
 
 .funcionamentoQuiz h2, .funcionamentoFormulario h2, .funcionamentoInformacoes h2 {
     text-align: center;
 }
 
-/* Media Queries para ajustes em telas menores */
 @media (max-width: 768px) {
     .imageContainer {
-        width: 12rem; /* Reduz o tamanho da imagem para não ocupar muito espaço */
+        width: 12rem; 
         height: 12rem;
     }
 
     .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte para melhorar a legibilidade */
-        margin-left: 20px; /* Margem ajustada para telas menores */
+        font-size: 0.9rem; 
+        margin-left: 20px; 
     }
 }
 
 @media (max-width: 480px) {
     .imageContainer {
-        width: 10rem; /* Mais reduções para telas muito pequenas */
+        width: 10rem; 
         height: 10rem;
     }
 
     .funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
-        padding: 0 10px; /* Menos espaço lateral para aproveitar ao máximo a largura da tela */
+        padding: 0 10px; 
     }
 
     .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
-        font-size: 0.8rem; /* Ainda menor para garantir legibilidade em dispositivos muito pequenos */
-        margin-left: 10px; /* Margem reduzida ainda mais para pequenas telas */
+        font-size: 0.8rem; 
+        margin-left: 10px; 
     }
 }

@@ -1,4 +1,3 @@
-/* src/pages/Home/Home.module.css */
 @import '../../styles/variables.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,500&display=swap');
 
@@ -22,7 +21,7 @@
 .title {
   color: var(--fontColorAmarelo);
   font-size: 2rem;
-  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); /* Sombra preta com meio transparente */
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); 
 
 }
 
@@ -41,13 +40,12 @@
 }
 
 .imageContainer {
-  max-width: 70vh; /* Ajusta a largura máxima da imagem */
+  max-width: 70vh; 
   height: auto;
-  margin: 0; /* Centraliza a imagem horizontalmente */
+  margin: 0; 
   padding: 0;
 }
 
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
   .title {
     font-size: 1.2rem;
@@ -56,15 +54,15 @@
   }
 
   .btn {
-    width: 80%; /* Reduz a largura dos botões para se adaptar a telas menores */
-    font-size: 1.2rem; /* Reduz o tamanho da fonte nos botões */
+    width: 80%; 
+    font-size: 1.2rem;
   }
 
   .imageContainer {
-    max-width: 50%; /* Aumenta a largura máxima da imagem para melhor visibilidade em telas pequenas */
+    max-width: 50%; 
   }
 
   .container {
-    padding: 1rem; /* Adiciona um pouco de padding ao redor do conteúdo para não ficar muito grudado nas bordas */
+    padding: 1rem;
   }
 }
