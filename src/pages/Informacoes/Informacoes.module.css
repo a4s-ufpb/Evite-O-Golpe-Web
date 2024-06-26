@@ -14,8 +14,17 @@
     flex-direction: column; 
 }
 
+.listaDicas {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
 
-.containerPrimario, .containerSecundario {
+.containerPrimario li {
+    padding-bottom: 1rem;
+}
+
+
+.containerPrimario, .containerSecundario, .containerTerciario {
     padding: 20px;
     margin: 10px;
     font-size: 18px;
@@ -25,34 +34,33 @@
     flex: 1;
 }
 
-.containerPrimario h2, .containerSecundario h2 {
+.containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
     text-align: center;
     color: #333;
     margin-bottom: 15px;
 }
 
-.containerPrimario p, .containerSecundario p,
-.containerPrimario a, .containerSecundario a {
+.containerSecundario p, .containerTerciario p, .containerSecundario a, .containerTerciario a{
     text-align: center;
     display: block;
     margin: 10px 0;
     color: #555;
 }
 
-.listaTutorial {
+.lista {
     padding: 0;
     list-style-type: none;
     margin-top: 20px;
 }
 
-.listaTutorial li {
+.lista li {
     padding: 10px;
     background-color: #e6e6e6;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.listaTutorial li a {
+.lista li a {
     text-decoration: none;
     color: #0645AD;
     font-weight: bold;
@@ -63,7 +71,7 @@
         flex-direction: column; 
     }
 
-    .containerPrimario, .containerSecundario {
+    .containerPrimario, .containerSecundario, .containerTerciario {
         margin: 10px 0; 
         width: 100%;
     }
@@ -72,12 +80,12 @@
         font-size: 20px;
     }
 
-    .containerPrimario h2, .containerSecundario h2 {
+    .containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
         font-size: 16px;
     }
 
-    .containerPrimario p, .containerSecundario p,
-    .containerPrimario a, .containerSecundario a {
+    .containerPrimario p, .containerSecundario p, .containerTerciario p,
+    .containerSecundario a, .containerTerciario a {
         font-size: 14px; 
     }
 }
@@ -87,15 +95,15 @@
         font-size: 18px; 
     }
 
-    .containerPrimario h2, .containerSecundario h2 {
+    .containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
         font-size: 15px; 
     }
 
-    .containerPrimario, .containerSecundario {
+    .containerPrimario, .containerSecundario, .containerTerciario {
         padding: 15px; 
     }
 
-    .listaTutorial li {
+    .lista li {
         padding: 8px; 
     }
 }

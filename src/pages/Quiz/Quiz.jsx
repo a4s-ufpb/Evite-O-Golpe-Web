@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import quizQuestions from '../../data/questions.json';
-import imagem from '../../assets/idoso.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -17,6 +16,7 @@ const Quiz = () => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [errorCount, setErrorCount] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
 
   const shuffleAndReduceQuestions = (questionsArray) => {
     let shuffled = [...questionsArray].sort(() => 0.5 - Math.random());
@@ -42,6 +42,7 @@ const Quiz = () => {
   const handleAnswerClick = async (answer, index) => {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = answer === currentQuestion.correct;
+
     setSelectedAnswerIndex(index);
     setIsAnswerCorrect(isCorrect);
 
@@ -60,25 +61,27 @@ const Quiz = () => {
       typeOfQuestion: "MULTIPLA ESCOLHA"
     };
 
-    try {
-      await saveResponseQuestion(response);
-    } catch (error) {
-      console.error('Error saving response:', error);
+    await saveResponseQuestion(response);
+
+    if (isCorrect) {
+      setCorrectCount(prev => prev + 1);
+      toast.success("Resposta correta!", { autoClose: 2000 });
+    } else {
+      setErrorCount(prev => prev + 1);
+      toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
     }
 
     setTimeout(() => {
       setSelectedAnswerIndex(null);
       setIsAnswerCorrect(null);
+
       if (isCorrect) {
         const nextIndex = currentQuestionIndex + 1;
         if (nextIndex < questions.length) {
           setCurrentQuestionIndex(nextIndex);
         } else {
-          navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount } });
+          navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount } });
         }
-      } else {
-        setErrorCount(prev => prev + 1);
-        toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
       }
     }, 1000);
   };
@@ -105,10 +108,10 @@ const Quiz = () => {
         theme="colored"
       />
       <div className={styles.content}>
-        <img className={styles.imagemQuiz} src={imagem} alt="Descrição da imagem" />
-        <div className={styles.buttonContainer}>
-          {questions.length > 0 && (
-            <>
+        {questions.length > 0 && (
+          <>
+            <img className={styles.imagemQuiz} src={questions[currentQuestionIndex].imageName} alt="Descrição da imagem" />
+            <div className={styles.buttonContainer}>
               <h3 className={styles.title}>{questions[currentQuestionIndex].question}</h3>
               {questions[currentQuestionIndex].answers.map((answer, idx) => (
                 <button
@@ -119,9 +122,9 @@ const Quiz = () => {
                   {answer}
                 </button>
               ))}
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
