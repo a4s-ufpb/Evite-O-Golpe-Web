@@ -1,92 +1,112 @@
 .container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    padding-top: 8rem;
-    height: 100vh; /* Full viewport height to center vertically in the whole view */
-    width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  padding-top: 8rem;
+  height: 100vh; /* Full viewport height to center vertically in the whole view */
+  width: 100vw; /* Full viewport width */
 }
 
 .container p {
-    padding-bottom: 1rem;
+padding-bottom: 1rem;
+font-size: 2rem;
 }
 .content {
-    text-align: center; /* Centers the text within the content div */
+text-align: center; /* Centers the text within the content div */
 }
 
 .content h2 {
-    padding-bottom: 2rem;
+padding-bottom: 2rem;
+font-size: 3rem;
 }
 
 .content form {
-    padding-bottom: 2rem;
+padding-bottom: 2rem;
+}
+
+.content input {
+  width: 25rem;
+  font-size: 3rem;
 }
 
 .buttonContainer {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
+  
 }
 
 .buttonContainer button, .noStyleLink {
-    display: block; /* Faz o botão preencher o container */
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
-    background-color: var(--fontColorAmarelo); /* Cor de fundo */
-    color: var(--fontColor); /* Cor do texto, corrigir a variável se necessário */
-    border-radius: 7px;
-    width: 100px;
-    height: 30px;
-    box-shadow: 0 8px 5px #07377a3f;
-    font-size: 1rem; /* Ajustar para tamanho legível */
-    font-weight: bold;
-    cursor: pointer; /* Estilo do cursor ao passar sobre o botão */
+  display: block; /* Faz o botão preencher o container */
+  margin: 0 auto; /* Centraliza o botão horizontalmente */
+  background-color: var(--fontColorAmarelo); /* Cor de fundo */
+  color: var(--fontColor); /* Cor do texto, corrigir a variável se necessário */
+  border-radius: 7px;
+  width: 200px;
+  height: 60px;
+  box-shadow: 0 8px 5px #07377a3f;
+  font-size: 2rem; /* Ajustar para tamanho legível */
+  font-weight: bold;
+  cursor: pointer; /* Estilo do cursor ao passar sobre o botão */
 }
 
 .buttonContainer button:hover {
-    background-color: var(--colorYellowHover);
+  background-color: var(--colorYellowHover);
 }
 
 .noStyleLink {
-    width: 250px;
-    height: 30px;
+  width: 500px;
+  height: 65px;
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
-    .container {
-      padding-top: 2rem; /* Reduz o padding superior para menos espaço acima */
-      height: auto; /* Remove a altura fixa para permitir ajuste ao conteúdo */
-    }
-  
-    .container p {
-      padding-bottom: 0.5rem; /* Menor espaço abaixo dos parágrafos */
-    }
-  
-    .content {
-      padding: 0.5rem; /* Adiciona padding para evitar que o conteúdo fique muito grudado nas bordas */
-    }
-  
-    .content h2 {
-      font-size: 1.5rem; /* Reduz o tamanho da fonte para h2 para melhor leitura em telas pequenas */
-      padding-bottom: 1rem; /* Menor espaço abaixo dos h2 */
-    }
-  
-    .content form {
-      padding-bottom: 1rem; /* Menor espaço abaixo dos formulários */
-    }
-  
-    .buttonContainer {
-      padding-bottom: 0.5rem; /* Menor espaço abaixo do container de botão */
-    }
-  
-    .buttonContainer button, .noStyleLink {
-      width: 80%; /* Aumenta a largura dos botões para melhor acessibilidade */
-      font-size: 0.8rem; /* Reduz o tamanho da fonte para adaptação em telas menores */
-    }
-  
-    .buttonContainer button:hover {
-      background-color: var(--colorYellowHover); /* Mantém a cor de hover */
-    }
-  
-    .noStyleLink {
-      width: 100%; /* Aumenta a largura do link para melhor acessibilidade */
-    }
+  .container {
+    padding-top: 2rem; /* Reduz o padding superior para menos espaço acima */
+    height: auto; /* Remove a altura fixa para permitir ajuste ao conteúdo */
   }
-  
+
+  .container p {
+    padding-bottom: 0.5rem; /* Menor espaço abaixo dos parágrafos */
+  }
+
+  .content input {
+    width: 80%;
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 0.5rem; /* Adiciona padding para evitar que o conteúdo fique muito grudado nas bordas */
+  }
+
+  .content h2 {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para h2 para melhor leitura em telas pequenas */
+    padding-bottom: 1rem; /* Menor espaço abaixo dos h2 */
+  }
+
+  .content form {
+    padding-bottom: 1rem; /* Menor espaço abaixo dos formulários */
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 0.5rem; /* Menor espaço abaixo do container de botão */
+    
+  }
+
+  .buttonContainer button {
+    width: 20%; /* Aumenta a largura dos botões para melhor acessibilidade */
+    height: 2rem;
+    font-size: 0.8rem; /* Reduz o tamanho da fonte para adaptação em telas menores */
+  }
+
+  .buttonContainer button:hover {
+    background-color: var(--colorYellowHover); /* Mantém a cor de hover */
+  }
+
+  .noStyleLink {
+    width: 50%; /* Aumenta a largura do link para melhor acessibilidade */
+    height: 2rem;
+    font-size: 0.8rem; /* Reduz o tamanho da fonte para adaptação em telas menores */
+  }
+}

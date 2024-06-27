@@ -52,7 +52,7 @@ const Quiz = () => {
       userID: userID,
       idApp: "WEB-EVITE-O-GOLPE 1.0",
       phase: "1",
-      activity: activityValue,
+      activity: currentQuestion.questionID,
       userResponse: answer,
       expectedResponse: currentQuestion.correct,
       question: currentQuestion.question,
