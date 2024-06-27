@@ -18,8 +18,8 @@ const Tutorial = () => {
       </div>
       
       <div className={styles.funcionamentoFormulario}>
-        <h2>Sobre o formulário:</h2>
-        <p>Para acessar o formulário de feedback do quiz, clique no item "Formulario" no menu de navegação. 
+        <h2>Sobre o Feedback:</h2>
+        <p>Para acessar o formulário de feedback do quiz, clique no item "Feedback" no menu de navegação. 
           Isso o direcionará ao formulário onde você pode compartilhar suas impressões e comentários sobre a experiência do quiz.</p>
         <img className={styles.imageContainer} src={imagem} alt="Descrição da imagem" />
       </div>

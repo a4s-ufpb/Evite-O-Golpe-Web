@@ -8,9 +8,9 @@ function FinalDoQuiz() {
     const navigate = useNavigate();
     const location = useLocation();
     const errors = location.state?.errorCount || 0;
-    const totalQuestions = 5;
-    const correctAnswers = totalQuestions - errors;
-    const performance = (correctAnswers / totalQuestions) * 100;
+    const correctAnswers = location.state?.correctCount || 0;
+    const totalAttempts = correctAnswers + errors;
+    const performance = totalAttempts > 0 ? (correctAnswers / totalAttempts) * 100 : 0;
 
     const handleNavigateHome = () => {
         navigate('/EviteOgolpeWEB');
@@ -18,6 +18,10 @@ function FinalDoQuiz() {
     
     const handleNavigateQuiz = () => {
         navigate('/EviteOgolpeWEB/quiz');
+    };
+
+    const openFeedbackForm = () => {
+        window.open('https://forms.gle/V4efQE8qwpShMZ1r7', '_blank');
     };
 
     return (
@@ -28,9 +32,11 @@ function FinalDoQuiz() {
                 <i className="bi bi-chevron-left"></i></button>
             <button type="button" onClick={handleNavigateQuiz} className={styles.btnReinciar}>
                 <i className="bi bi-arrow-repeat"></i></button>
+            <h2>Tentativas totais: {totalAttempts}</h2>
             <h2>Acertos: {correctAnswers}</h2>
             <h2>Tentativas erradas: {errors}</h2>
             <h2>Desempenho geral: {performance.toFixed(2)}%</h2>
+            <button type="button" onClick={openFeedbackForm} className={styles.btnFeedBack}>FeedBack</button>
         </div>
     );
 }

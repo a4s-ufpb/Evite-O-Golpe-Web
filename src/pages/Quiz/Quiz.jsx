@@ -46,52 +46,60 @@ const Quiz = () => {
     setSelectedAnswerIndex(index);
     setIsAnswerCorrect(isCorrect);
 
-    const activityValue = `P${currentQuestionIndex + 1}`;
-
     const response = {
-      userID: userID,
-      idApp: "WEB-EVITE-O-GOLPE 1.0",
-      phase: "1",
-      activity: currentQuestion.questionID,
-      userResponse: answer,
-      expectedResponse: currentQuestion.correct,
-      question: currentQuestion.question,
-      isCorrect: isCorrect,
-      dateResponse: new Date().toISOString(),
-      typeOfQuestion: "MULTIPLA ESCOLHA"
+        userID: userID,
+        idApp: "WEB-EVITE-O-GOLPE 1.0",
+        phase: "1",
+        activity: currentQuestion.questionID,
+        userResponse: answer,
+        expectedResponse: currentQuestion.correct,
+        question: currentQuestion.question,
+        isCorrect: isCorrect,
+        dateResponse: new Date().toISOString(),
+        typeOfQuestion: "MULTIPLA ESCOLHA"
     };
 
     await saveResponseQuestion(response);
 
     if (isCorrect) {
-      setCorrectCount(prev => prev + 1);
-      toast.success("Resposta correta!", { autoClose: 2000 });
+        setCorrectCount(prev => {
+            const updatedCount = prev + 1;
+            console.log("Acertou:", updatedCount);
+
+            setTimeout(() => {
+                if (currentQuestionIndex + 1 < questions.length) {
+                    setCurrentQuestionIndex(currentQuestionIndex + 1);
+                } else {
+                    navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
+                }
+                // Reset states regardless of the question sequence
+                setSelectedAnswerIndex(null);
+                setIsAnswerCorrect(null);
+            }, 2000);
+
+            return updatedCount;
+        });
+        toast.success("Resposta correta!", { autoClose: 2000 });
     } else {
-      setErrorCount(prev => prev + 1);
-      toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
+        setErrorCount(prev => {
+            console.log("Errou:", prev + 1);
+            setTimeout(() => {
+                // Reset states regardless of the question sequence
+                setSelectedAnswerIndex(null);
+                setIsAnswerCorrect(null);
+            }, 2000);
+            return prev + 1;
+        });
+        toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
     }
+};
 
-    setTimeout(() => {
-      setSelectedAnswerIndex(null);
-      setIsAnswerCorrect(null);
-
-      if (isCorrect) {
-        const nextIndex = currentQuestionIndex + 1;
-        if (nextIndex < questions.length) {
-          setCurrentQuestionIndex(nextIndex);
-        } else {
-          navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount } });
-        }
-      }
-    }, 1000);
-  };
-
-  const getButtonClass = (idx, selectedAnswerIndex, isAnswerCorrect) => {
+const getButtonClass = (idx, selectedAnswerIndex, isAnswerCorrect) => {
     if (selectedAnswerIndex !== null && selectedAnswerIndex === idx) {
-      return isAnswerCorrect ? styles.correct : styles.incorrect;
+        return isAnswerCorrect ? styles.correct : styles.incorrect;
     }
     return '';
-  };
+};
 
   return (
     <div className={styles.container}>
