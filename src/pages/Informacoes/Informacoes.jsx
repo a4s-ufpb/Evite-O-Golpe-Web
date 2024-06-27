@@ -22,6 +22,8 @@ const Informacoes = () => {
                 <div className={styles.containerSecundario}>
                     <h2>Sites</h2>  
                     <ul className={styles.lista}>
+                        <p>Mais sobre o nosso projeto​ </p>
+                        <li><a href="https://eviteogolpe.netlify.app/" target="_blank" rel="noopener noreferrer">https://eviteogolpe.netlify.app/</a></li>
                         <p>Segurança na rede e privacidade de dados: 8 dicas para se proteger e evitar golpes</p>
                         <li><a href="https://conectaja.proteste.org.br/8-dicas-para-se-proteger-e-evitar-golpes/" target="_blank" rel="noopener noreferrer">https://conectaja.proteste.org.br/8-dicas-para-se-proteger-e-evitar-golpes/</a></li>
                         <p>10 dicas para evitar fraudes nas compras online</p>
@@ -30,6 +32,8 @@ const Informacoes = () => {
                         <li><a href="https://www.hostinger.com.br/tutoriais/o-que-e-phishing-e-como-se-proteger-de-golpes-na-internet" target="_blank" rel="noopener noreferrer">https://www.hostinger.com.br/tutoriais/o-que-e-phishing-e-como-se-proteger-de-golpes-na-internet</a></li>
                         <p>Como Identificar e Evitar Golpes Online: Um Guia Abrangente​ </p>
                         <li><a href="https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/" target="_blank" rel="noopener noreferrer">https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/</a></li>
+                        <p>Conheça a verificação em duas etapas​ </p>
+                        <li><a href="https://ntinf.ufsj.edu.br/index.php/dicas-de-seguranca-informacao/conheca-a-verificacao-em-duas-etapas#:~:text=A%20verifica%C3%A7%C3%A3o%20em%20duas%20etapas%20%C3%A9%20um%20recurso%20opcional%20oferecido,basta%20que%20voc%C3%AA%20a%20desabilite." target="_blank" rel="noopener noreferrer">https://ntinf.ufsj.edu.br/index.php/dicas-de-seguranca-informacao/conheca-a-verificacao-em-duas-etapas#:~:text=A%20verifica%C3%A7%C3%A3o%20em%20duas%20etapas%20%C3%A9%20um%20recurso%20opcional%20oferecido,basta%20que%20voc%C3%AA%20a%20desabilite.</a></li>                        
                     </ul>
                 </div>
 
