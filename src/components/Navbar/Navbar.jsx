@@ -31,7 +31,7 @@ function Navbar() {
           <Link to="/EviteOgolpeWEB/" className={isActive("/EviteOgolpeWEB/") ? "active" : "notActive"} onClick={closeMenu}>Home</Link>
         </li>
         <li>
-          <Link to="/EviteOgolpeWEB/Quiz" className={isActive("/EviteOgolpeWEB/Quiz") ? "active" : ""} onClick={closeMenu}>Quiz</Link>
+          <Link to="/EviteOgolpeWEB/InformacaoUsuario" className={isActive("/EviteOgolpeWEB/InformacaoUsuario") ? "active" : ""} onClick={closeMenu}>Quiz</Link>
         </li>
         <li>
           <Link to="/EviteOgolpeWEB/Tutorial" className={isActive("/EviteOgolpeWEB/Tutorial") ? "active" : ""} onClick={closeMenu}>Tutorial</Link>

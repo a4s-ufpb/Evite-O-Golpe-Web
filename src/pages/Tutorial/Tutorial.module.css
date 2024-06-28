@@ -1,23 +1,43 @@
 /* Tutorial.module.css */
-.imageContainer {
-    width: 15rem;
-    height: 15rem;
-    padding: 1rem;
+img {
     display: block;   
     margin: 0 auto; 
 }
 
-.funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
+.imageAcerto, .imageErro {
+    width: 40rem;
+    height: 35rem;
+    padding: 1rem;
+}
+
+
+.imageFeedback {
+    width: 45rem;
+    height: 5rem;
+}
+
+.imageInfo, .imageFinal {
+    width: 60rem;
+    height: 30rem;
+}
+
+.imageNav {
+    width: 45rem;
+    height: 3.2rem;
+}
+
+
+.container {
     margin-bottom: 30px; 
     padding: 0 20px; 
 }
 
-.funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
+.container p {
     text-align: left; 
     margin-left: 30px; 
 }
 
-.funcionamentoQuiz h2, .funcionamentoFormulario h2, .funcionamentoInformacoes h2 {
+.container h2 {
     text-align: center;
 }
 
@@ -27,7 +47,7 @@
         height: 12rem;
     }
 
-    .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
+    .container p {
         font-size: 0.9rem; 
         margin-left: 20px; 
     }
@@ -39,11 +59,11 @@
         height: 10rem;
     }
 
-    .funcionamentoQuiz, .funcionamentoFormulario, .funcionamentoInformacoes {
+    .container {
         padding: 0 10px; 
     }
 
-    .funcionamentoQuiz p, .funcionamentoFormulario p, .funcionamentoInformacoes p {
+    .container p {
         font-size: 0.8rem; 
         margin-left: 10px; 
     }

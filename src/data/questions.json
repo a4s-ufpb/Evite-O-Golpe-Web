@@ -1,7 +1,7 @@
 [
     {
         "questionID": "P1",
-        "imageName": ".../../assets/whatsapp.png",
+        "imageName": ".../../assets/quiz/whatsapp.png",
         "phase": "1",
         "question": "Qual prática ajuda a evitar golpes no WhatsApp?",
         "answers": ["Não clicar em links de mensagens de números suspeitos", "Clicar em todos os links recebidos", "Compartilhar suas informações pessoais", "Desativar a verificação em duas etapas"],
@@ -9,7 +9,7 @@
     },
     {
         "questionID": "P2",
-        "imageName": ".../../assets/facebook.png" ,
+        "imageName": ".../../assets/quiz/facebook.png" ,
         "phase": "1",
         "question": "Qual prática ajuda a evitar golpes no Facebook?",
         "answers": ["Compartilhar dados privados com estranhos", "Clicar em links de propagandas das publicações de páginas suspeitas", "Desconfiar de qualquer postagem com um preço milagroso", "Acreditar em quaisquer notícias publicadas sem checar a veracidade das mesmas"],
@@ -17,7 +17,7 @@
     },
     {
         "questionID": "P3",
-        "imageName": ".../../assets/instagram.png",
+        "imageName": ".../../assets/quiz/instagram.png",
         "phase": "1",
         "question": "O que é importante fazer para evitar golpes no Instagram?",
         "answers": ["Colocar data de nascimento como senha do Instagram", "Deixar número de telefone antigo associado à conta", "Habilitar verificação em duas etapas", "Desabilitar configurações de segurança"],
@@ -25,7 +25,7 @@
     },
     {
         "questionID": "P4",
-        "imageName": ".../../assets/banco.png",
+        "imageName": ".../../assets/quiz/banco.png",
         "phase": "1",
         "question": "Como se proteger contra golpes bancários?",
         "answers": ["Olhar o nome de quem é o destinatário da transferência antes de enviar", "Usar no aplicativo bancário a mesma senha usada no e-mail", "Deixar senhas anotadas em papéis guardados na carteira", "Usar senhas curtas e fáceis de lembrar"],
@@ -33,7 +33,7 @@
     },
     {
         "questionID": "P5",
-        "imageName": ".../../assets/loja_online.png",
+        "imageName": ".../../assets/quiz/loja_online.png",
         "phase": "1",
         "question": "O que devemos suspeitar ao comprar em uma loja online? (Marque a opção incorreta)",
         "answers": ["Valores muito abaixo do que é cobrado pelo mercado", "Falta de outras fontes de informações sobre a empresa na Internet", "Não é preciso suspeitar de lojas online, pois são todas seguras", "Avisos de que a promoção está acabando em poucos instantes"],
@@ -41,7 +41,7 @@
     },
     {
         "questionID": "P6",
-        "imageName": ".../../assets/identidade.png",
+        "imageName": ".../../assets/quiz/identidade.png",
         "phase": "1",
         "question": "Como devemos proteger a nossa identidade online?",
         "answers": ["Usar a mesma senha em todas as nossas contas", "Atualizar regularmente as senhas das contas", "Ignorar as notificações de aviso de acesso da conta", "Fazer login com a conta em um site desconhecido"],
@@ -49,7 +49,7 @@
     },
     {
         "questionID": "P7",
-        "imageName": ".../../assets/caridade.png",
+        "imageName": ".../../assets/quiz/caridade.png",
         "phase": "1",
         "question": "O que é importante verificar ao doar para caridade online?",
         "answers": ["Clicar em qualquer link de doação e doar", "Não verificar a existência da organização", "Doar para organização popular independentemente da causa", "Verificar a existência da ONG"],
@@ -57,7 +57,7 @@
     },
     {
         "questionID": "P8",
-        "imageName": ".../../assets/phishing.png",
+        "imageName": ".../../assets/quiz/phishing.png",
         "phase": "1",
         "question": "Como identificar tentativas de phishing (roubo de dados pessoais)?",
         "answers": ["Clicar rapidamente nos links recebidos por e-mails desconhecidos", "Fornecer as suas informações pessoais para qualquer site solicitado", "Verificar cuidadosamente os remetentes de e-mails", "Ignorar os avisos de segurança"],
@@ -65,7 +65,7 @@
     },
     {
         "questionID": "P9",
-        "imageName": ".../../assets/proteger_senha.png",
+        "imageName": ".../../assets/quiz/proteger_senha.png",
         "phase": "1",
         "question": "Qual é a melhor prática para se proteger de golpes na internet?",
         "answers": ["Compartilhar informações pessoais com estranhos", "Clicar em links suspeitos", "Manter senhas fortes e atualizadas", "Abrir anexos de e-mails de fontes desconhecidas"],
@@ -73,7 +73,7 @@
     },
     {
         "questionID": "P10",
-        "imageName": ".../../assets/fake_news.png",
+        "imageName": ".../../assets/quiz/fake_news.png",
         "phase": "1",
         "question": "O que é uma notícia falsa (FakeNews)?",
         "answers": ["Uma notícia sensacionalista publicada em um jornal de renome", "Uma notícia que contradiz suas crenças pessoais", "Uma notícia criada com o intuito de enganar e desinformar", "Uma notícia que não possui fontes citadas"],
@@ -81,7 +81,7 @@
     },
     {
         "questionID": "P11",
-        "imageName": ".../../assets/idoso.png",
+        "imageName": ".../../assets/quiz/idoso.png",
         "phase": "1",
         "question": "Como não cair em golpes telefônicos?",
         "answers": ["Sempre compartilhar informações pessoais por telefone", "Ignorar chamadas de números desconhecidos", "Atender a todas as chamadas sem questionar", "Fornecer senhas por telefone quando solicitado"],
@@ -89,7 +89,7 @@
     },
     {
         "questionID": "P12",
-        "imageName": ".../../assets/proteger_golpes.png",
+        "imageName": ".../../assets/quiz/proteger_golpes.png",
         "phase": "1",
         "question": "Qual é a melhor maneira de proteger suas senhas?",
         "answers": ["Utilizar senhas curtas e fáceis de lembrar", "Manter a mesma senha para todas as contas", "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres", "Compartilhar senhas com amigos"],
@@ -97,7 +97,7 @@
     },
     {
         "questionID": "P13",
-        "imageName": ".../../assets/dispositivo_movel_virus.png",
+        "imageName": ".../../assets/quiz/dispositivo_movel_virus.png",
         "phase": "1",
         "question": "Como evitar cair em golpes ao baixar aplicativos em dispositivos móveis?",
         "answers": ["Baixar apenas aplicativos de fontes confiáveis", "Instalar qualquer aplicativo disponível em um site", "Compartilhar informações pessoais durante o processo", "Ignorar as permissões solicitadas pelos aplicativos"],
@@ -105,7 +105,7 @@
     },
     {
         "questionID": "P14",
-        "imageName": ".../../assets/sorteio_online.png",
+        "imageName": ".../../assets/quiz/sorteio_online.png",
         "phase": "1",
         "question": "O que é importante considerar ao participar de sorteios online?",
         "answers": ["Sempre fornecer todas as informações solicitadas", "Desconfiar de sorteios que exigem pagamento para participar", "Acreditar em todas as promoções sem questionar", "Participar de todos os sorteios disponíveis para aumentar as chances"],
@@ -113,7 +113,7 @@
     },
     {
         "questionID": "P15",
-        "imageName": ".../../assets/emprego_falsos.png",
+        "imageName": ".../../assets/quiz/emprego_falsos.png",
         "phase": "1",
         "question": "Como evitar cair em golpes online de empregos falsos?",
         "answers": ["Fornecer todas as suas informações pessoais", "Desconfiar de ofertas de emprego que parecem ser muito vantajosas", "Aceitar qualquer proposta sem verificar a autenticidade da empresa", "Divulgar informações pessoais nas redes sociais após receber uma oferta"],
@@ -121,7 +121,7 @@
     },
     {
         "questionID": "P16",
-        "imageName": ".../../assets/pedindo_dinheiro.png",
+        "imageName": ".../../assets/quiz/pedindo_dinheiro.png",
         "phase": "1",
         "question": "O que fazer ao receber mensagens suspeitas de amigos pedindo dinheiro através de redes sociais?",
         "answers": ["Transferir dinheiro imediatamente sem questionar se a conta com foto é realmente da pessoa", "Verificar a autenticidade da mensagem através de outras formas de contato", "Ignorar a mensagem e não tomar nenhuma ação", "Compartilhar publicamente informações sobre a solicitação"],
@@ -129,7 +129,7 @@
     },
     {
         "questionID": "P17",
-        "imageName": ".../../assets/idoso.png",
+        "imageName": ".../../assets/quiz/idoso.png",
         "phase": "1",
         "question": "Como se proteger contra golpes de phishing em mensagens de texto (SMS)?",
         "answers": ["Clicar em todos os links recebidos via SMS", "Nunca verificar a origem de mensagens SMS", "Ignorar mensagens SMS suspeitas", "Responder a todas as mensagens SMS, mesmo de fontes desconhecidas"],
@@ -137,7 +137,7 @@
     },
     {
         "questionID": "P18",
-        "imageName": ".../../assets/idoso.png",
+        "imageName": ".../../assets/quiz/idoso.png",
         "phase": "1",
         "question": "O que fazer ao ver uma mensagem em um site indicando que seu dispositivo está em risco?",
         "answers": ["Clicar no link para baixar imediatamente um programa para resolver o problema", "Executar o antivírus já instalado em seu dispositivo ou desconfiar da mensagem", "Confiar no site que indica o problema se ele tiver imagens de antivírus conhecidos", "Entrar em contato no link de contato por WhatsApp disponível no site"],
@@ -145,7 +145,7 @@
     },
     {
         "questionID": "P19",
-        "imageName": ".../../assets/idoso.png",
+        "imageName": ".../../assets/quiz/idoso.png",
         "phase": "1",
         "question": "O que fazer ao suspeitar de uma oferta de investimento online?",
         "answers": ["Investir imediatamente sem investigar", "Verificar a reputação da empresa e procurar avaliações", "Ligar para o telefone indicado na oferta", "Compartilhar a oferta com amigos sem verificar"],
@@ -153,7 +153,7 @@
     },
     {
         "questionID": "P20",
-        "imageName": ".../../assets/idoso.png",
+        "imageName": ".../../assets/quiz/idoso.png",
         "phase": "1",
         "question": "Como evitar golpes em aplicativos de redes sociais?",
         "answers": ["Compartilhar informações pessoais rapidamente", "Desconfiar de perfis com informações incompletas", "Confiar em todas as declarações feitas pelos usuários", "Nunca relatar comportamentos suspeitos"],

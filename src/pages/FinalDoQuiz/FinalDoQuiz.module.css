@@ -82,7 +82,17 @@ body {
     font-size: 18px; 
   }
 
+  .btnFeedBack {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+  }
+
   h1 {
     font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
   }
 }
