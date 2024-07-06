@@ -15,14 +15,12 @@
   align-items: center;
   text-align: center;
   background-color: var(--backgroundClaro);
-  
 }
 
 .title {
   color: var(--fontColorAmarelo);
   font-size: 2rem;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); 
-
 }
 
 .btn {
@@ -60,9 +58,11 @@
 
   .imageContainer {
     max-width: 50%; 
+    margin: 0 auto;
   }
 
   .container {
     padding: 1rem;
+    text-align: center;
   }
 }

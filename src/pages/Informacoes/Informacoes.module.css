@@ -1,109 +1,196 @@
+@import '../../styles/variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* Garante que o body use toda a largura da viewport */
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--backgroundClaro);
+  width: 100%;
+  overflow-x: hidden; /* Evita rolagem horizontal no contêiner */
+}
+
 .titulo {
-    text-align: center;
-    font-size: 24px; 
-    color: #07377A;
-    padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #07377A;
+  padding: 20px 0;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    height: 100vh;
-    box-sizing: border-box;
-    flex-direction: column; 
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column; 
+  width: 100%; /* Garante que o contêiner use toda a largura disponível */
+  overflow-x: hidden; /* Evita overflow horizontal */
 }
 
 .listaDicas {
-    list-style-type: disc;
-    padding-left: 2rem;
+  list-style-type: disc;
+  padding-left: 2rem;
 }
 
 .containerPrimario li {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-
-.containerPrimario, .containerSecundario, .containerTerciario {
-    padding: 20px;
-    margin: 10px;
-    font-size: 18px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    flex: 1;
+.containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario {
+  padding: 20px;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  width: calc(100% - 40px); /* Ajusta a largura considerando o padding */
+  overflow-x: hidden; /* Evita overflow horizontal */
 }
 
-.containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
+.containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.containerSecundario p, .containerTerciario p, .containerSecundario a, .containerTerciario a{
-    text-align: center;
-    display: block;
-    margin: 10px 0;
-    color: #555;
+.containerSecundario p, .containerTerciario p, .containerQuaternario p,
+.containerSecundario a, .containerTerciario a, .containerQuaternario a {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+  color: #555;
 }
 
 .lista {
-    padding: 0;
-    list-style-type: none;
-    margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 20px;
 }
 
 .lista li {
-    padding: 10px;
-    background-color: #e6e6e6;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .lista li a {
-    text-decoration: none;
-    color: #0645AD;
-    font-weight: bold;
+  text-decoration: none;
+  color: #0645AD;
+  font-weight: bold;
+  word-break: break-word; /* Permite que os links quebrem em várias linhas */
+  overflow-wrap: break-word; /* Permite que os links quebrem em várias linhas */
+}
+
+.profileContent {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profileText {
+  flex: 1;
+  text-align: left;
+}
+
+.profileText h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profileText p {
+  font-size: 16px;
+  color: #333;
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column; 
-    }
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
 
-    .containerPrimario, .containerSecundario, .containerTerciario {
-        margin: 10px 0; 
-        width: 100%;
-    }
+  .containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario {
+    margin: 10px auto; /* Centraliza os contêineres */
+    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+    padding: 10px;
+  }
 
-    .titulo {
-        font-size: 20px;
-    }
+  .titulo {
+    font-size: 20px;
+  }
 
-    .containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
-        font-size: 16px;
-    }
+  .containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2 {
+    font-size: 16px;
+  }
 
-    .containerPrimario p, .containerSecundario p, .containerTerciario p,
-    .containerSecundario a, .containerTerciario a {
-        font-size: 14px; 
-    }
+  .containerPrimario p, .containerSecundario p, .containerTerciario p, .containerQuaternario p,
+  .containerSecundario a, .containerTerciario a, .containerQuaternario a {
+    font-size: 14px;
+  }
+
+  .profileContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileImage {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profileText {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .titulo {
-        font-size: 18px; 
-    }
+  .titulo {
+    font-size: 18px;
+  }
 
-    .containerPrimario h2, .containerSecundario h2, .containerTerciario h2 {
-        font-size: 15px; 
-    }
+  .containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2 {
+    font-size: 15px;
+  }
 
-    .containerPrimario, .containerSecundario, .containerTerciario {
-        padding: 15px; 
-    }
+  .containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario {
+    padding: 10px;
+    margin: 10px auto;
+    width: calc(100% - 20px);
+  }
 
-    .lista li {
-        padding: 8px; 
-    }
+  .lista li {
+    padding: 10px;
+  }
 }

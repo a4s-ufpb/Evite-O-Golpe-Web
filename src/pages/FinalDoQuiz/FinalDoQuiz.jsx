@@ -21,7 +21,7 @@ function FinalDoQuiz() {
     };
 
     const openFeedbackForm = () => {
-        window.open('https://forms.gle/V4efQE8qwpShMZ1r7', '_blank');
+        window.open('https://bit.ly/form_evite_o_golpe', '_blank');
     };
 
     return (

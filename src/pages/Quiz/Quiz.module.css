@@ -57,7 +57,7 @@
 }
 
 .customButton:hover {
-  background-color: var(--colorYellowHover);
+  background-color: var(red);
 }
 
 .correct {

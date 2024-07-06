@@ -17,6 +17,7 @@ const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [errorCount, setErrorCount] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const shuffleAndReduceQuestions = (questionsArray) => {
     let shuffled = [...questionsArray].sort(() => 0.5 - Math.random());
@@ -40,6 +41,7 @@ const Quiz = () => {
   };
 
   const handleAnswerClick = async (answer, index) => {
+    setIsButtonDisabled(true);
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = answer === currentQuestion.correct;
 
@@ -47,59 +49,61 @@ const Quiz = () => {
     setIsAnswerCorrect(isCorrect);
 
     const response = {
-        userID: userID,
-        idApp: "WEB-EVITE-O-GOLPE 1.0",
-        phase: "1",
-        activity: currentQuestion.questionID,
-        userResponse: answer,
-        expectedResponse: currentQuestion.correct,
-        question: currentQuestion.question,
-        isCorrect: isCorrect,
-        dateResponse: new Date().toISOString(),
-        typeOfQuestion: "MULTIPLA ESCOLHA"
+      userID: userID,
+      idApp: "WEB-EVITE-O-GOLPE 1.0",
+      phase: "1",
+      activity: currentQuestion.questionID,
+      userResponse: answer,
+      expectedResponse: currentQuestion.correct,
+      question: currentQuestion.question,
+      isCorrect: isCorrect,
+      dateResponse: new Date().toISOString(),
+      typeOfQuestion: "MULTIPLA ESCOLHA"
     };
 
     await saveResponseQuestion(response);
 
     if (isCorrect) {
-        setCorrectCount(prev => {
-            const updatedCount = prev + 1;
-            console.log("Acertou:", updatedCount);
+      setCorrectCount(prev => {
+        const updatedCount = prev + 1;
+        console.log("Acertou:", updatedCount);
 
-            setTimeout(() => {
-                if (currentQuestionIndex + 1 < questions.length) {
-                    setCurrentQuestionIndex(currentQuestionIndex + 1);
-                } else {
-                    navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
-                }
-                // Reset states regardless of the question sequence
-                setSelectedAnswerIndex(null);
-                setIsAnswerCorrect(null);
-            }, 2000);
+        setTimeout(() => {
+          if (currentQuestionIndex + 1 < questions.length) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          } else {
+            navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
+          }
+          // Reset states regardless of the question sequence
+          setSelectedAnswerIndex(null);
+          setIsAnswerCorrect(null);
+          setIsButtonDisabled(false);
+        }, 2000);
 
-            return updatedCount;
-        });
-        toast.success("Resposta correta!", { autoClose: 2000 });
+        return updatedCount;
+      });
+      toast.success("Resposta correta!", { autoClose: 2000 });
     } else {
-        setErrorCount(prev => {
-            console.log("Errou:", prev + 1);
-            setTimeout(() => {
-                // Reset states regardless of the question sequence
-                setSelectedAnswerIndex(null);
-                setIsAnswerCorrect(null);
-            }, 2000);
-            return prev + 1;
-        });
-        toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
+      setErrorCount(prev => {
+        console.log("Errou:", prev + 1);
+        setTimeout(() => {
+          // Reset states regardless of the question sequence
+          setSelectedAnswerIndex(null);
+          setIsAnswerCorrect(null);
+          setIsButtonDisabled(false);
+        }, 2000);
+        return prev + 1;
+      });
+      toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
     }
-};
+  };
 
-const getButtonClass = (idx, selectedAnswerIndex, isAnswerCorrect) => {
+  const getButtonClass = (idx, selectedAnswerIndex, isAnswerCorrect) => {
     if (selectedAnswerIndex !== null && selectedAnswerIndex === idx) {
-        return isAnswerCorrect ? styles.correct : styles.incorrect;
+      return isAnswerCorrect ? styles.correct : styles.incorrect;
     }
     return '';
-};
+  };
 
   return (
     <div className={styles.container}>
@@ -126,6 +130,7 @@ const getButtonClass = (idx, selectedAnswerIndex, isAnswerCorrect) => {
                   key={idx}
                   className={`${styles.customButton} ${getButtonClass(idx, selectedAnswerIndex, isAnswerCorrect)}`}
                   onClick={() => handleAnswerClick(answer, idx)}
+                  disabled={isButtonDisabled}
                 >
                   {answer}
                 </button>

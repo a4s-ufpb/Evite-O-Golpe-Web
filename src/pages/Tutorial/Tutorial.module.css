@@ -10,7 +10,6 @@ img {
     padding: 1rem;
 }
 
-
 .imageFeedback {
     width: 45rem;
     height: 5rem;
@@ -26,7 +25,6 @@ img {
     height: 3.2rem;
 }
 
-
 .container {
     margin-bottom: 30px; 
     padding: 0 20px; 
@@ -41,10 +39,26 @@ img {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .imageContainer {
-        width: 12rem; 
-        height: 12rem;
+/* Media Queries */
+@media (max-width: 800px) {
+    .imageAcerto, .imageErro {
+        width: 30rem;
+        height: 25rem;
+    }
+
+    .imageFeedback {
+        width: 30rem;
+        height: 4rem;
+    }
+
+    .imageInfo, .imageFinal {
+        width: 35rem;
+        height: 19.5rem;
+    }
+
+    .imageNav {
+        width: 35rem;
+        height: 2.5rem;
     }
 
     .container p {
@@ -53,18 +67,34 @@ img {
     }
 }
 
-@media (max-width: 480px) {
-    .imageContainer {
-        width: 10rem; 
-        height: 10rem;
+@media (max-width: 550px) {
+    .imageAcerto, .imageErro {
+        width: 15rem;
+        height: 13rem;
+    }
+
+    .imageFeedback {
+        width: 17rem;
+        height: 1.8rem;
+    }
+
+    .imageInfo, .imageFinal {
+        width: 17rem;
+        height: 8.5rem;
+    }
+
+    .imageNav {
+        width: 17rem;
+        height: 1.3rem;
     }
 
     .container {
-        padding: 0 10px; 
+        padding: 0 5px; 
     }
 
     .container p {
-        font-size: 0.8rem; 
-        margin-left: 10px; 
+        font-size: 0.7rem; 
+        margin-left: 5px; 
     }
 }
+
