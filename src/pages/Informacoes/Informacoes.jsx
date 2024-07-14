@@ -1,47 +1,56 @@
-import cafeImage from '../../assets/idoso.png';
 import React from 'react';
+import profileImageAyla from '../../assets/Ayla.png';
+import profileImageLucas from '../../assets/Lucas.png';
+import profileImageDavid from '../../assets/David.png';
 import styles from './Informacoes.module.css';
 
 const Informacoes = () => {
     return (
         <div className={styles.container}>
-            <h1 className={styles.titulo}>Sobre nós:</h1>
-            <div className={styles.containerQuaternario}>
-                <h2>Prof Resp:</h2>
-                <div className={styles.profileContent}>
-                    <img className={styles.profileImage} src={cafeImage} alt="Ayla" />
-                    <div className={styles.profileText}>
-                        <h1>Ayla</h1>
-                        <p>Vitae summa brevis spem nos vetat incohare longam; et omne gaudium brevissimum est, et mors certa est, nec procul a nobis, et est vita misera et nulla speranda est; ideo carpe diem et virtutem colere, amicos amare, et meminisse te memento vivere.</p>
+            <h2>About us:</h2>
+            <div className={styles.profileContainerWrapper}>
+                <div className={styles.profileContainer}>
+                    <div className={styles.profileRow}>
+                        <div className={styles.profileContent}>
+                            <img className={styles.profileImage} src={profileImageAyla} alt="Profile" />
+                            <div className={styles.profileText}>
+                                <h1>Ayla Rebouças</h1>
+                                <p>Professora pesquisadora do DCX/CCAE nas áreas de Informática na Educação, Engenharia de Software, Sistemas Distribuídos e Sistemas Adaptativos.</p>
+                                <a href="https://www.linkedin.com/in/ayla-dantas-1256802/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <h2>Alunos:</h2>
-                <div className={styles.profileContent}>
-                    <img className={styles.profileImage} src={cafeImage} alt="Lucas" />
-                    <div className={styles.profileText}>
-                        <h1>Lucas</h1>
-                        <p>Vitae summa brevis spem nos vetat incohare longam; et omne gaudium brevissimum est, et mors certa est, nec procul a nobis, et est vita misera et nulla speranda est; ideo carpe diem et virtutem colere, amicos amare, et meminisse te memento vivere.</p>
-                    </div>
-                </div>
-
-                <div className={styles.profileContent}>
-                    <img className={styles.profileImage} src={cafeImage} alt="David" />
-                    <div className={styles.profileText}>
-                        <h1>David</h1>
-                        <p>Vitae summa brevis spem nos vetat incohare longam; et omne gaudium brevissimum est, et mors certa est, nec procul a nobis, et est vita misera et nulla speranda est; ideo carpe diem et virtutem colere, amicos amare, et meminisse te memento vivere.</p>
+                    <div className={styles.profileRow}>
+                        <div className={styles.profileContent}>
+                            <img className={styles.profileImage} src={profileImageLucas} alt="Profile" />
+                            <div className={styles.profileText}>
+                                <h1>Lucas Felipe</h1>
+                                <p>Graduando em Ciência da Computação no campus IV da UFPB, em Rio Tinto-PB. Áreas de Interesse: Desenvolvimento FullStack, Java, Python, PHP, Testes</p>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                            </div>
+                        </div>
+                        <div className={styles.profileContent}>
+                            <img className={styles.profileImage} src={profileImageDavid} alt="Profile" />
+                            <div className={styles.profileText}>
+                                <h1>David Goncalves</h1>
+                                <p>Graduando em Sistemas de Informação no campus IV da UFPB, em Rio Tinto-PB. Áreas de Interesse: Desenvolvimento Back End, HTML5, CSS3, Testes, API’s</p>
+                                <a href="https://www.linkedin.com/in/david-gon%C3%A7alves-maia-a51218212/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                            </div>
+                        </div>
+                        {/* Add more profileContent divs for additional students if needed */}
                     </div>
                 </div>
             </div>
 
             <h1 className={styles.titulo}>Lista de materiais para mais informações sobre golpes</h1>
+
             <div className={styles.wrapper}>
                 <div className={styles.containerPrimario}>
                     <h2>Dicas gerais</h2>
                     <ul className={styles.listaDicas}>
                         <li>Não use senhas fáceis. Tente incorporar números, caracteres especiais e varie entre maiúsculas e minúsculas para aumentar a segurança da sua senha.</li>
                         <li>Se uma oferta parece boa demais para ser verdade, provavelmente não é legítima. Promoções com preços muito abaixo do mercado podem ser um indicativo de fraude.</li>
-                        <li>Evite clicar em links ou abrir anexos de mensagens não solicitadas ou de remetentes desconhecidos, pois podem fazer com que programas maliciosos que podem danificar seu dispositivo ou compartilhar seus dados.</li>
+                        <li>Evite clicar em links ou abrir anexos de mensagens não solicitadas ou de remetentes desconhecidos, pois podem fazer com que programas maliciosos que podem danificar seu dispositivo ou compartilhar seus dados</li>
                     </ul>
                 </div>
 
@@ -50,7 +59,7 @@ const Informacoes = () => {
                     <ul className={styles.lista}>
                         <p>Mais informações sobre golpes na internet:</p>
                         <li><a href="https://eviteogolpe.netlify.app/" target="_blank" rel="noopener noreferrer">https://eviteogolpe.netlify.app/</a></li>
-                        <p>Mais sobre o nosso projeto:</p>
+                        <p>Mais sobre o nosso projeto​:</p>
                         <li><a href="https://apps4society.dcx.ufpb.br" target="_blank" rel="noopener noreferrer">https://apps4society.dcx.ufpb.br</a></li>
                         <p>Segurança na rede e privacidade de dados: 8 dicas para se proteger e evitar golpes</p>
                         <li><a href="https://conectaja.proteste.org.br/8-dicas-para-se-proteger-e-evitar-golpes/" target="_blank" rel="noopener noreferrer">https://conectaja.proteste.org.br/8-dicas-para-se-proteger-e-evitar-golpes/</a></li>
@@ -58,9 +67,9 @@ const Informacoes = () => {
                         <li><a href="https://www.serasa.com.br/premium/blog/10-dicas-para-evitar-fraudes-nas-compras-online/" target="_blank" rel="noopener noreferrer">https://www.serasa.com.br/premium/blog/10-dicas-para-evitar-fraudes-nas-compras-online/</a></li>
                         <p>O Que é Phishing? Dicas para Evitar Golpes na Internet</p>
                         <li><a href="https://www.hostinger.com.br/tutoriais/o-que-e-phishing-e-como-se-proteger-de-golpes-na-internet" target="_blank" rel="noopener noreferrer">https://www.hostinger.com.br/tutoriais/o-que-e-phishing-e-como-se-proteger-de-golpes-na-internet</a></li>
-                        <p>Como Identificar e Evitar Golpes Online: Um Guia Abrangente</p>
+                        <p>Como Identificar e Evitar Golpes Online: Um Guia Abrangente​ </p>
                         <li><a href="https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/" target="_blank" rel="noopener noreferrer">https://wi2be.com.br/internet/como-identificar-e-evitar-golpes-online-um-guia-abrangente/</a></li>
-                        <p>Conheça a verificação em duas etapas</p>
+                        <p>Conheça a verificação em duas etapas​ </p>
                         <li><a href="https://acesso.gov.br/faq/_perguntasdafaq/oqueautenticacao2fatores.html" target="_blank" rel="noopener noreferrer">https://acesso.gov.br/faq/_perguntasdafaq/oqueautenticacao2fatores.html</a></li>
                     </ul>
                 </div>

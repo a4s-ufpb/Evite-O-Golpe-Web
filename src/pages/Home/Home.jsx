@@ -23,6 +23,9 @@ const Home = () => {
       </div>
       <button type="button" onClick={handleNavigateToQuiz} className={styles.btn}>Iniciar</button>
       <button type="button" onClick={handleNavigateToTutorial} className={styles.btn}>Tutorial</button>
+      <footer className={styles.footer}>
+        <p>Copyright © 2024 <span className={styles.companyName}>Apps4Society</span>. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

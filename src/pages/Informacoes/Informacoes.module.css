@@ -53,7 +53,7 @@ body {
   padding-bottom: 1rem;
 }
 
-.containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario {
+.containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario, .profileContainerWrapper {
   padding: 20px;
   margin: 10px;
   font-size: 18px;
@@ -65,7 +65,7 @@ body {
   overflow-x: hidden; /* Evita overflow horizontal */
 }
 
-.containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2 {
+.containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2, .profileContainerWrapper h2 {
   text-align: center;
   color: #333;
   margin-bottom: 15px;
@@ -98,6 +98,20 @@ body {
   font-weight: bold;
   word-break: break-word; /* Permite que os links quebrem em várias linhas */
   overflow-wrap: break-word; /* Permite que os links quebrem em várias linhas */
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between profile rows */
+  width: 100%;
+}
+
+.profileRow {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 20px; /* Space between profile cards */
 }
 
 .profileContent {
@@ -134,35 +148,27 @@ body {
   color: #333;
 }
 
+.profileText a {
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.profileText a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
-  .wrapper {
+  .profileRow {
     flex-direction: column;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario {
-    margin: 10px auto; /* Centraliza os contêineres */
-    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
-    padding: 10px;
-  }
-
-  .titulo {
-    font-size: 20px;
-  }
-
-  .containerPrimario h2, .containerSecundario h2, .containerTerciario h2, .containerQuaternario h2 {
-    font-size: 16px;
-  }
-
-  .containerPrimario p, .containerSecundario p, .containerTerciario p, .containerQuaternario p,
-  .containerSecundario a, .containerTerciario a, .containerQuaternario a {
-    font-size: 14px;
+    align-items: flex-start;
   }
 
   .profileContent {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .profileImage {
