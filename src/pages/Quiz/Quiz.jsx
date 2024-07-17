@@ -74,7 +74,6 @@ const Quiz = () => {
           } else {
             navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
           }
-          // Reset states regardless of the question sequence
           setSelectedAnswerIndex(null);
           setIsAnswerCorrect(null);
           setIsButtonDisabled(false);
@@ -87,7 +86,6 @@ const Quiz = () => {
       setErrorCount(prev => {
         console.log("Errou:", prev + 1);
         setTimeout(() => {
-          // Reset states regardless of the question sequence
           setSelectedAnswerIndex(null);
           setIsAnswerCorrect(null);
           setIsButtonDisabled(false);
@@ -122,7 +120,7 @@ const Quiz = () => {
       <div className={styles.content}>
         {questions.length > 0 && (
           <>
-            <img className={styles.imagemQuiz} src={questions[currentQuestionIndex].imageName} alt="Descrição da imagem" />
+            <img className={styles.imagemQuiz} src={questions[currentQuestionIndex].imageName} alt="Imagem referente a questão" />
             <div className={styles.buttonContainer}>
               <h3 className={styles.title}>{questions[currentQuestionIndex].question}</h3>
               {questions[currentQuestionIndex].answers.map((answer, idx) => (

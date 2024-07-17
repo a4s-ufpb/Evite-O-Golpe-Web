@@ -27,7 +27,7 @@ function FinalDoQuiz() {
     return (
         <div className={styles.finalPageContainer}>
             <h1>Parabéns por finalizar o quiz!</h1>
-            <img className={styles.imagem} src={imagem} alt="Descrição da imagem" />
+            <img className={styles.imagem} src={imagem} alt="Imagem de parabens por ter terminado" />
             <button type="button" onClick={handleNavigateHome} className={styles.btnVoltar}>
                 <i className="bi bi-chevron-left"></i></button>
             <button type="button" onClick={handleNavigateQuiz} className={styles.btnReinciar}>

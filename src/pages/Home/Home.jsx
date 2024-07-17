@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainMenu}>
-        <img className={styles.imageContainer} src={imagem} alt="Imagem de idoso" />
+        <img className={styles.imageContainer} src={imagem} alt="Imagem da tela inicial" />
         <h1 className={styles.title}>Evite o Golpe</h1>
       </div>
       <button type="button" onClick={handleNavigateToQuiz} className={styles.btn}>Iniciar</button>
