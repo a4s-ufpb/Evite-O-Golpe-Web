@@ -40,6 +40,9 @@ function Navbar() {
         <Link to="/EviteOgolpeWEB/Informacoes" className={isActive("/EviteOgolpeWEB/Informacoes") ? "active" : "inactive"} onClick={closeMenu}>Mais Informações</Link>
         </li>
         <li>
+          <Link to="/EviteOgolpeWEB/Sobre" className={isActive("/EviteOgolpeWEB/Sobre") ? "active" : "notActive"} onClick={closeMenu}>Sobre</Link>
+        </li>
+        <li>
           <a href="https://bit.ly/form_evite_o_golpe" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Feedback</a>
         </li>
       </ul>

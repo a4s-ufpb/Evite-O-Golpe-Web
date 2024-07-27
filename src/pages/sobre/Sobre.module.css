@@ -1,0 +1,121 @@
+@import '../../styles/variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* Garante que o body use toda a largura da viewport */
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--backgroundClaro);
+  width: 100%;
+  overflow-x: hidden; /* Evita rolagem horizontal no contêiner */
+}
+
+.profileContainerWrapper {
+  padding: 20px;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  width: calc(100% - 40px); /* Ajusta a largura considerando o padding */
+  overflow-x: hidden; /* Evita overflow horizontal */
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between profile rows */
+  width: 100%;
+}
+
+.profileRow {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 20px; /* Space between profile cards */
+}
+
+.profileContent {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profileText {
+  flex: 1;
+  text-align: left;
+}
+
+.profileText h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profileText p {
+  font-size: 16px;
+  color: #333;
+}
+
+.profileText a {
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.profileText a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .profileRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profileContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profileImage {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profileText {
+    text-align: center;
+  }
+}
