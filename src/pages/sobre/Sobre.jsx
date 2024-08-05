@@ -7,7 +7,7 @@ import styles from './Sobre.module.css';
 const Sobre = () => {
     return (
         <div className={styles.container}>
-            <h2>About us:</h2>
+            <h2>Sobre nós:</h2>
             <div className={styles.profileContainerWrapper}>
                 <div className={styles.profileContainer}>
                     
