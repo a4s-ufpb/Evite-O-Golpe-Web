@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './pages/Home/Home.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx'
@@ -14,37 +14,37 @@ import Usuario from './pages/InformacaoUsuario/InformacaoUsuario.jsx'
 import Sobre from './pages/sobre/Sobre.jsx'
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/EviteOgolpeWEB/",
+        path: "/",
         element: <Home />
       },
       {
-        path: "/EviteOgolpeWEB/Quiz",
+        path: "Quiz",
         element: <Quiz />
       },
       {
-        path: "/EviteOgolpeWEB/Tutorial",
+        path: "Tutorial",
         element: <Tutorial />
       },
       {
-        path: "/EviteOgolpeWEB/FinalDoQuiz",
+        path: "FinalDoQuiz",
         element: <FinalDoQuiz />
       },
       {
-        path: "/EviteOgolpeWEB/Informacoes",
+        path: "Informacoes",
         element: <Informacoes />
       },
       {
-        path: "/EviteOgolpeWEB/InformacaoUsuario",
+        path: "InformacaoUsuario",
         element: <Usuario />
-      }
-      ,
+      },
       {
-        path: "/EviteOgolpeWEB/Sobre",
+        path: "Sobre",
         element: <Sobre />
       }
     ]

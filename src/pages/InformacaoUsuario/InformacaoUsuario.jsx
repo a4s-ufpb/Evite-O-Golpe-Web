@@ -15,7 +15,7 @@ const InformacaoUsuario = () => {
         const response = await axios.post(API_URL, { userID });
         console.log('User saved:', response.data);
         sessionStorage.setItem('userID', userID);
-        navigate('/EviteOgolpeWEB/Quiz'); 
+        navigate('/Quiz'); 
       } catch (error) {
         console.error('Error saving user:', error);
       }
@@ -27,7 +27,7 @@ const InformacaoUsuario = () => {
       const response = await axios.post(API_URL, { userID: 'Anonymous' });
       console.log('Anonymous user saved:', response.data);
       sessionStorage.setItem('userID', 'Anonymous');
-      navigate('/EviteOgolpeWEB/Quiz');
+      navigate('/Quiz');
     } catch (error) {
       console.error('Error saving anonymous user:', error);
     }

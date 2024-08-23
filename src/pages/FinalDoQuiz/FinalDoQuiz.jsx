@@ -13,11 +13,11 @@ function FinalDoQuiz() {
     const performance = totalAttempts > 0 ? (correctAnswers / totalAttempts) * 100 : 0;
 
     const handleNavigateHome = () => {
-        navigate('/EviteOgolpeWEB');
+        navigate('/');
     };
     
     const handleNavigateQuiz = () => {
-        navigate('/EviteOgolpeWEB/quiz');
+        navigate('/');
     };
 
     const openFeedbackForm = () => {

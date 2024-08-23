@@ -8,11 +8,11 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleNavigateToQuiz = () => {
-    navigate('/EviteOgolpeWEB/InformacaoUsuario');
+    navigate('/InformacaoUsuario');
   };
 
   const handleNavigateToTutorial = () => {
-    navigate('/EviteOgolpeWEB/Tutorial')
+    navigate('/Tutorial')
   }
 
   return (

@@ -72,7 +72,7 @@ const Quiz = () => {
           if (currentQuestionIndex + 1 < questions.length) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
           } else {
-            navigate('/EviteOgolpeWEB/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
+            navigate('/FinalDoQuiz', { state: { errorCount, correctCount: updatedCount } });
           }
           setSelectedAnswerIndex(null);
           setIsAnswerCorrect(null);
