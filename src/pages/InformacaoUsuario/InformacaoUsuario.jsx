@@ -6,7 +6,7 @@ import styles from './InformacaoUsuario.module.css';
 const InformacaoUsuario = () => {
   const [userID, setUserID] = useState('');
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_USER_URL;
+  const API_URL = 'https://activities.a4s.dev.br/api/user';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
