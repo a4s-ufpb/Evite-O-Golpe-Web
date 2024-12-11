@@ -31,7 +31,7 @@ const Quiz = () => {
 
   const saveResponseQuestion = async (response) => {
     try {
-      const result = await axios.post('https://activities.a4s.dev.br/api/response', response);
+      const result = await axios.post(import.meta.env.VITE_API_RESPONSE_URL, response);
       return result.data;
     } catch (error) {
       console.error('Error saving response:', error);

@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './Tutorial.module.css';
-
-import acertando from '../../../public/assets/tutorial/acertando_quiz.png';
-import errando from '../../../public/assets/tutorial/errando_quiz.png';
-import feedback from '../../../public/assets/tutorial/feedback.png';
-import maisInformacoes from '../../../public/assets/tutorial/mais_informacoes.png';
-import finalQuiz from '../../../public/assets/tutorial/final_quiz.png';
-import navbar from '../../../public/assets/tutorial/navbar.png'
+import acertando from '../../assets/tutorial/acertando_quiz.png';
+import errando from '../../assets/tutorial/errando_quiz.png';
+import feedback from '../../assets/tutorial/feedback.png';
+import maisInformacoes from '../../assets/tutorial/mais_informacoes.png';
+import finalQuiz from '../../assets/tutorial/final_quiz.png';
+import navbar from '../../assets/tutorial/navbar.png';
 
 const Tutorial = () => {
   return (
